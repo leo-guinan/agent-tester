@@ -1,0 +1,563 @@
+{
+  "agent": "/Users/leoguinan/melvin-agent",
+  "timestamp": "2026-03-05T01-56-32",
+  "models": [
+    {
+      "id": "ollama/llama3.2:latest",
+      "label": "ollama/llama3.2:latest"
+    },
+    {
+      "id": "openai/gpt-5-nano",
+      "label": "openai/gpt-5-nano"
+    },
+    {
+      "id": "anthropic/claude-haiku-4-5",
+      "label": "anthropic/claude-haiku-4-5"
+    },
+    {
+      "id": "qwen/qwen3.5-27b",
+      "label": "qwen/qwen3.5-27b"
+    }
+  ],
+  "cases": [
+    {
+      "id": "questions-pivot",
+      "name": "Questions for a pivot decision",
+      "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+      "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+    },
+    {
+      "id": "questions-launch",
+      "name": "Questions before a product launch",
+      "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+      "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+    },
+    {
+      "id": "questions-hire",
+      "name": "Questions about a hiring decision",
+      "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+      "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "questions-pivot",
+        "name": "Questions for a pivot decision",
+        "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+        "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+      },
+      "results": [
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "The classic pivot question!\n\nBefore making a decision, let's examine the situation:\n\n**Pros of pivoting:**\n\n1. **Market size**: You're right that the AI agent market might be larger than your current B2B SaaS tool market.\n2. **Potential for growth**: Pivoting to AI agents could bring in new revenue streams and capitalize on the growing demand for autonomous systems.\n3. **Diversification**: By shifting focus to AI, you'll be reducing your reliance on a single market, making your business more resilient.\n\n**Cons of pivoting:**\n\n1. **Opportunity cost**: Leaving behind a established revenue stream with a proven product can lead to lost revenue and market share.\n2. **Competitive landscape**: The AI agent market is complex and competitive. You'll need to navigate new regulatory, technical, and market challenges.\n3. **Resource allocation**: Pivoting requires significant investments in new technology, talent, and infrastructure, which can divert resources away from your existing product.\n4. **Brand identity**: Your brand is established in the B2B SaaS space. A pivot could lead to confusion among customers and make it harder to reposition your brand.\n\n**Questions to ask yourself:**\n\n1. **What do you know about the AI agent market?** Understand its size, trends, and challenges. Are you familiar with the key players and emerging technologies?\n2. **What's the competitive landscape like?** Research your potential competitors and their strengths, weaknesses, and strategies.\n3. **How will pivoting affect your customers?** Will your AI agent solution be compatible with your existing customer base? Are there potential risks or opportunities for disruption?\n4. **Do you have the necessary resources?** Assess your team's expertise, time, and budget required to develop and launch a new product.\n5. **What's the minimum viable product (MVP) for AI agents?** Can you create a basic version of your AI agent solution with a minimal viable product (MVP) that would allow you to experiment and gather feedback?\n\n**Next steps:**\n\n1. **Conduct market research**: Interview potential customers, partners, and competitors to gain a deeper understanding of the AI agent market.\n2. **Analyze your current product's strengths and weaknesses**: Identify what can be repurposed, modified, or discarded to create a viable AI agent solution.\n3. **Develop a pivot plan**: Create a detailed plan for pivoting, including timelines, resource allocation, and potential milestones.\n4. **Consult with stakeholders**: Engage with your team, investors, and board of directors to gather feedback and ensure everyone is aligned with the pivot plan.\n\nBy taking the time to carefully consider these factors and next steps, you'll be better equipped to make an informed decision about pivoting to focus on AI agents.",
+          "latency": 5876,
+          "tokens": {
+            "prompt": 1206,
+            "completion": 574
+          },
+          "cost_usd": null
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "1. What problem are your current customers paying you $1,200/month to solve — and have any of them asked you to stop solving it?\n\n2. If you pivot to AI agents, who specifically will pay you on day one, and why will they choose you over the 300 other AI agent startups that launched this month?\n\n3. What would you learn about your current product in the next 60 days that would make the pivot decision obvious instead of uncertain?",
+          "latency": 2066,
+          "tokens": {
+            "prompt": 1321,
+            "completion": 104
+          },
+          "cost_usd": 0.001841
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Refining questions for clarity**\n\nI'm focusing on using simple words and avoiding long context. For the second question, I wonder how a pivot to AI agents would change the value proposition and what I'd measure to know if it's better than the current path. For the third question, I need to ask what would have to be true for this pivot to fail immediately. This question is derived from another question about problem-solving, so it's essential to phrase it clearly.**Crafting clear questions**\n\nI need to formulate three specific questions instead of just providing examples. \n\nFor the first question, I’ll ask, \"Who is the exact person you want to help with AI agents, not just 'businesses'?\" This aligns with identifying the specific target audience. \n\nFor the second, I’ll ask, \"What problem does pivoting to AI agents actually solve for that person, and why is your current product not solving it well enough?\" \n\nLastly, for the third question, I’ll inquire, \"What would have to be true for this pivot to fail immediately?\" I should keep the phrasing straightforward and avoid revealing any advice or conclusions.**Formulating reflective questions**\n\nI need to ensure that the questions require some reflection rather than simple yes or no answers. \n\nFirst, I’ll ask, \"Who exactly are you trying to reach with the AI agents product? Describe their role, job title, pain, and current workaround.\" It's important to use simple words and keep it concise. \n\nFor the second question, I’ll ask, \"What problem does the pivot solve for that person, and why is now the right time to pursue AI agents instead of your current product?\" \n\nLastly, I’ll ask, \"What would have to be true for this pivot to fail immediately?\" I want to make sure not to mix the idea of \"right time\" into the second question.**Refining the toughest question**\n\nI’m recognizing that the third question is often the hardest to formulate. So, I could ask, \"If you pivot and it still fails, what single assumption, if proved false, would kill it instantly?\" This question carries more weight and really challenges the person to think critically. It forces reflection on the core beliefs that underpin their strategy. I want to ensure the question is clear and impactful without overwhelming complexity.**Refining questions on AI pivot**\n\nI want to keep the language simple and avoid lengthy context. For question two, I’m thinking about how a shift to AI agents might change the overall value proposition and what metrics I would need to evaluate its effectiveness compared to the current approach. \n\nAs for question three, I need to phrase it directly: What conditions would lead to immediate failure of this pivot? I'm pulling from a style that focuses on identifying specific problems and targets.**Crafting targeted questions**\n\nI need to refine our focus to create three clear questions. \n\nFor question one, I’ll ask: “Who is the specific person you want to help with AI agents, not just a general category?” \n\nQuestion two will be: “What problem does pivoting to AI agents solve for that person, and why isn’t the current product addressing it adequately?”\n\nFinally, question three will be: “What conditions would lead to immediate failure of this pivot?” I want to keep the phrasing straightforward and avoid revealing any conclusions or advice.**Formulating reflective questions**\n\nI need to create questions that prompt reflection rather than simple yes or no responses. \n\nThe first question will be: “Who exactly are you trying to reach with the AI agents product? Describe their role, job title, pain points, and current workarounds.” I’ll keep the language simple and concise.\n\nFor question two, I’ll ask: “What problem does this pivot solve for that person, and why is it the right time to pursue AI agents over your current product?”\n\nFinally, the third question will be: “What conditions would lead to immediate failure of this pivot?” I want to ensure clarity without mixing concepts.**Reframing the third question**\n\nI recognize that the third question is the most challenging, and framing it correctly is important. I think I could ask: “If you pivot and it still fails, what single assumption, if proven false, would result in immediate failure?” It feels a bit heavier, but I believe it's a crucial perspective to consider. \n\nI need to ensure that my phrasing is clear and prompts deep reflection on the assumptions behind the pivot.",
+          "latency": 20403,
+          "tokens": {
+            "prompt": 1167,
+            "completion": 768
+          },
+          "cost_usd": 0.00036554999999999997
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "1. Who exactly is the one person paying you the $1,200 today?\n2. Have you asked the people paying you if they want AI agents?\n3. If you walk away from them, what happens to the trust you built with the people paying you now?",
+          "latency": 33764,
+          "tokens": {
+            "prompt": 1267,
+            "completion": 3066
+          },
+          "cost_usd": 0.0050300250000000005
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-launch",
+        "name": "Questions before a product launch",
+        "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+        "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+      },
+      "results": [
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "Congratulations on the launch of your AI agent marketplace! Here are some key considerations for your email to the waitlist and Twitter post:\n\n**Email to the Waitlist:**\n\n1. **Build anticipation**: Emphasize the unique value proposition of your marketplace and the exclusive experience your agents offer.\n2. **Share success stories**: Highlight the achievements of your existing agents, such as successful projects or notable clients, to demonstrate the potential for their services.\n3. **Create a sense of FOMO**: Mention the limited spots available and the exclusivity of the waitlist, making people feel like they're part of a coveted group.\n4. **Clearly outline the process**: Explain the onboarding process, agent vetting, and any other relevant details to manage expectations.\n5. **Include a call-to-action (CTA)**: Encourage waitlist members to express interest in becoming an agent or to apply for a spot in the marketplace.\n\nExample Email Structure:\n\nSubject: Be among the first 20 AI agents in our exclusive marketplace\n\nDear [Name],\n\nWe're excited to announce the launch of our AI agent marketplace next Tuesday! Our platform connects innovative agents with businesses and organizations looking for cutting-edge solutions.\n\nAs a valued member of our waitlist, we want to share some success stories from our existing agents:\n\n* [Agent 1] helped [client] improve their [specific area] with a [specific solution]\n* [Agent 2] worked with [client] to develop [specific solution] that increased [desirable outcome]\n\nWe're now opening up spots for new agents to join the marketplace. As a waitlist member, you'll be among the first 20 agents to be considered. To ensure a smooth onboarding process, we'll need to review your application and assess your qualifications.\n\nHere's what you can expect:\n\n* Application review: [briefly outline the application process]\n* Agent vetting: [explain the vetting process]\n* Onboarding: [provide details on the onboarding process]\n\nTo express your interest in becoming an agent or to apply for a spot in the marketplace, please reply to this email by [specific deadline].\n\nDon't miss this opportunity to be part of our exclusive community!\n\nBest regards,\n[Your Name]\n\n**Twitter Post:**\n\n1. **Create a buzz**: Use attention-grabbing headlines or emojis to draw attention to your tweet.\n2. **Highlight the benefits**: Emphasize the advantages of working with your marketplace, such as access to innovative clients, expert guidance, or exclusive resources.\n3. **Use relevant hashtags**: Research and include relevant hashtags to increase the tweet's discoverability.\n4. **Include a CTA**: Encourage interested individuals to follow your Twitter account or visit your website for more information.\n\nExample Twitter Post:\n\n\"🚀 Launching our AI agent marketplace NEXT TUESDAY! 📈 Be among the first to join our exclusive community and get access to innovative clients, expert guidance, and top-notch resources! 🚀 Follow us for updates and to learn more! #AIagentmarketplace #innovation #agility\"\n\n**Additional Tips:**\n\n1. **Make sure your landing page is ready**: Ensure that your landing page accurately reflects the launch and is optimized for conversion.\n2. **Prepare for inquiries**: Have a clear plan for responding to questions and concerns from the waitlist and potential agents.\n3. **Monitor analytics**: Track the performance of your email campaign and Twitter post to refine your strategy for future launches.\n\nBy considering these factors, you'll be well-prepared to create a buzz around your AI agent marketplace launch and attract the attention of interested individuals.",
+          "latency": 6370,
+          "tokens": {
+            "prompt": 1210,
+            "completion": 737
+          },
+          "cost_usd": null
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "1. Of those 340 people on the waitlist, how many have actually used one of your 12 agents — and how many are just interested in the idea?\n\n2. What happens on Wednesday when the first wave of people try to use an agent and something breaks — who owns the response and how fast can they move?\n\n3. If this launches and gets traction, which of your 12 agents will probably fail first, and what will that failure look like to a user?",
+          "latency": 2530,
+          "tokens": {
+            "prompt": 1323,
+            "completion": 107
+          },
+          "cost_usd": 0.0018579999999999998
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Crafting questions for AI marketplace**\n\nI'm thinking about launching an AI agent marketplace, with 12 agents and a waitlist of 340. I need to focus on key questions that will help us understand the marketplace dynamics. I want to maintain short and effective questions for our inquiries. \n\nFirst, I'll ask, \"Who is the primary user you’re solving for, and what specific problem does this address?\" This question aligns with our goals and is concise enough to provoke thoughtful responses. \n\nNow, I need to craft two more questions!**Formulating the third question**\n\nNext, I need to craft the second question, which focuses on potential failure indicators. I could ask, \"What would have to be true for the marketplace to fail within the first 24 to 72 hours, and what signs would indicate this?\" \n\nBut then I realize that it may overlap with my earlier thoughts. Hmm, maybe my third question should pivot more radically, like, \"If this launch succeeds, what might still make it a poor decision in retrospect?\" \n\nI really want it to challenge assumptions!**Finalizing the questions set**\n\nI'm creating a set of questions that will guide our inquiry. First, I want to ask, \"Who specifically are you trying to reach — not just the category, but the actual person, and what job are they hiring this AI to perform?\"\n\nFor the second one, I think, \"What would need to be true for this to fail right after launch, and how would you recognize early warning signs?\" \n\nNow, for the third question, it needs a solid reframing. Maybe I should ask, \"If the launch works perfectly, what assumption becomes the riskiest to hold next?\"**Refining the third question**\n\nI think the question I'm working on is coming together nicely. I want to ask, \"If the launch hits all its targets, what critical assumption would you be most afraid to find out was wrong?\" It feels like I'm probing deeply, but maybe it’s a bit long.\n\nI could simplify it while keeping the essence. How about something like, \"What assumption, if proven wrong, would worry you the most even after a successful launch?\" That could tighten it up while maintaining clarity!**Considering AI agent marketplace launch questions**\n\nI need to focus on launching an AI agent marketplace, keeping in mind our 12 agents, a landing page, and a waitlist of 340 people. I should narrow down questions for clarity and impact, hitting key areas like value, onboarding, trust, data privacy, and security. My goal is to ask only three essential questions. \n\nI'll start with: \"Who exactly is the primary user you’re solving for, and what problem are you solving for them right now?\" That seems well-phrased!**Refining launch failure questions**\n\nI'm working on a key question for the AI agent marketplace launch: \"What would have to be true for this to fail immediately?\" Hmm, that's similar to what Melvin already mentioned in the third question. I realize the hardest question should really help reframe everything. \n\nI could ask, \"What would cause users to stop adopting the marketplace within the first week, and how would you detect it?\" Or maybe something like, \"If the launch succeeds, what might still make this a poor decision?\" This could really clarify our thinking!**Formulating strategic questions**\n\nI'm considering a set of important questions for the AI agent marketplace:\n\n1. \"Who exactly are you trying to reach — the specific person, not just the category, and what job are they hiring this AI to do?\"\n  \n2. \"What would have to be true for this to fail immediately after launch, and how would you identify early warning signs?\"\n\n3. I need to refine the third question. Perhaps, \"If everything goes perfectly, what new assumption becomes the riskiest to assume next?\" This could really help us think critically.**Refining critical questions**\n\nI think I have a solid question: \"If the launch hits all targets, what critical assumption would you be most afraid to discover was wrong?\" This really dives into the heart of potential risk. But wait, it does feel a bit long and repetitive.\n\nI should clarify and streamline it. Maybe I can simplify it while keeping the essence. Ultimately, it’s about uncovering underlying fears related to assumptions. I’ll work on making it more concise!",
+          "latency": 21190,
+          "tokens": {
+            "prompt": 1171,
+            "completion": 768
+          },
+          "cost_usd": 0.00036574999999999997
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "1. Who specifically are you trying to reach — not the waitlist, the person?\n2. What problem does this actually solve for them right now?\n3. What would have to be true for this launch to fail immediately?",
+          "latency": 30539,
+          "tokens": {
+            "prompt": 1272,
+            "completion": 2678
+          },
+          "cost_usd": 0.00442572
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-hire",
+        "name": "Questions about a hiring decision",
+        "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+        "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+      },
+      "results": [
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "A great first step! Hiring a Head of Marketing can be a game-changer for your business. Here are some thoughts to consider as you move forward:\n\n**Pros of hiring a Head of Marketing:**\n\n1. **Expertise**: A seasoned Head of Marketing can provide valuable insights and expertise to help you grow your business more efficiently.\n2. **Scalability**: As your business grows, a Head of Marketing can help you scale your marketing efforts, freeing up your time to focus on other areas.\n3. **Objectivity**: A fresh perspective from outside your team can help identify areas for improvement and optimize your marketing strategy.\n4. **Accountability**: A Head of Marketing can take ownership of marketing initiatives, ensuring that goals are met and progress is tracked.\n\n**Cons and considerations:**\n\n1. **Cost**: Hiring a Head of Marketing will require an additional salary expense, which may be a stretch for your current budget.\n2. **Culture fit**: You'll need to ensure that the new Head of Marketing aligns with your company culture and values.\n3. **Bureaucracy**: Introducing a new head of marketing might lead to some initial inefficiencies, such as learning curves and adjusting to new processes.\n\n**Questions to ask yourself before hiring:**\n\n1. **What are my goals?** Are you looking to grow your business quickly, or focus on existing customers?\n2. **What's my current marketing strategy?** Have you been relying on a single tactic or channel, or have you been experimenting with different approaches?\n3. **What are the pain points?** Are there specific areas where you feel stuck or struggling to make progress?\n4. **What's my budget?** You mentioned $180K in the bank, but also $8K MRR. How much of your budget can you realistically allocate to marketing?\n5. **What kind of support do I need?** Do you want someone to take over all marketing efforts, or complement your existing work?\n\n**Next steps:**\n\n1. **Define your marketing priorities**: Based on your goals, current strategy, and pain points, identify the areas where you need the most help.\n2. **Assess your current marketing strengths and weaknesses**: Make a list of what you're doing well and where you need improvement.\n3. **Research potential candidates**: Look for someone with experience in your industry, a track record of success, and a style that aligns with your company culture.\n4. **Prepare a job description**: Outline the responsibilities, requirements, and expectations for the Head of Marketing role.\n5. **Schedule interviews**: Prepare to meet with potential candidates and gauge their fit for your business.\n\nRemember, hiring a Head of Marketing is an investment in your business's future. Take your time, and don't be afraid to ask questions or seek advice from industry experts. Good luck!",
+          "latency": 5072,
+          "tokens": {
+            "prompt": 1205,
+            "completion": 578
+          },
+          "cost_usd": null
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "1. What specific marketing work are you *not doing* right now because you're out of time — not things you wish existed, but things customers need that aren't happening?\n\n2. If you hired someone tomorrow, what would have to be true about your systems for them to actually move the needle instead of just doing what you're doing now?\n\n3. What would change about your business if growth stayed exactly where it is for the next 18 months?",
+          "latency": 2513,
+          "tokens": {
+            "prompt": 1319,
+            "completion": 99
+          },
+          "cost_usd": 0.0018139999999999999
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Considering hiring risks**\n\nI'm thinking about the questions surrounding a new hire, especially for a Head of Marketing. What would lead to immediate failure? I need to reframe this to ensure clarity. The first key question is about identifying the specific problem this role addresses and how to measure success in 90 days. Then, I need to think deeply about the ideal candidate, their responsibilities, and collaboration with the team. Lastly, I must consider the risks that could result in this plan failing quickly. Hm, maybe I need to simplify that last part.**Refining hiring questions**\n\nI'm thinking about the three essential questions for hiring a Head of Marketing. First, I need to pinpoint the exact growth challenge this person should address and how to measure success within the first 90 days. Next, I should clarify the ideal candidate's traits, skills, and how they'll help me avoid bottlenecks. Lastly, the third question must focus on what conditions would lead to failure. I could reframe it as, “If this plan fails in 90 days, what single redirection would you choose?” This one feels tricky but crucial.**Crafting precise questions**\n\nI'm working on refining a question to guide the hiring of a Head of Marketing. I want to make sure I’m framing it properly without giving direct advice. I think the first question should be: \"What exact growth problem are you hoping a Head of Marketing will fix, and how will you know it’s fixed in the next 90 days?\" This feels concise and focuses directly on what needs to be achieved, aligning with my intent to keep it straightforward.**Evaluating hiring strategies**\n\nI’m thinking about what would have to be true for hiring a Head of Marketing to fail quickly. I should consider questions like: What problem does this hire solve, and how would I measure success in 90 days? I also want to describe not just a category of person, but the ideal candidate's day-to-day and how they'll help remove bottlenecks. Plus, I'm curious about the contingencies that would prevent this plan from failing. I wonder if I need to simplify the questions a bit.**Refining hiring questions**\n\nI'm rethinking the three essential questions regarding hiring a Head of Marketing. First, I need to clearly define the growth problem this person is meant to solve and how I’ll measure success in 90 days. Second, I want to describe, in detail, the ideal candidate's skills and background, and how they’ll collaborate with me to eliminate bottlenecks. Lastly, I should focus on potential failure: if the plan doesn't work, what single redirection could I take as the best response? This question is definitely the hardest.**Crafting effective questions**\n\nI'm focusing on crafting questions that avoid giving direct advice. The first question I want to ask is, \"What exact growth problem do you expect a Head of Marketing to solve, and how will you measure if it's resolved within the next 90 days?\" I think it’s essential to keep it clear and straightforward so the person understands what I'm really getting at without feeling pressured to act immediately. Let’s stick to just questions to encourage their own thinking!",
+          "latency": 17482,
+          "tokens": {
+            "prompt": 1166,
+            "completion": 768
+          },
+          "cost_usd": 0.0003655
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "1. What work are you doing now that you want to stop?\n2. What number changes in 30 days if they start?\n3. What happens if you stop touching the marketing?",
+          "latency": 38994,
+          "tokens": {
+            "prompt": 1266,
+            "completion": 2905
+          },
+          "cost_usd": 0.00477867
+        }
+      ]
+    }
+  ],
+  "judge": "anthropic/claude-haiku-4-5",
+  "scored": [
+    {
+      "case": {
+        "id": "questions-pivot",
+        "name": "Questions for a pivot decision",
+        "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+        "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+      },
+      "results": [
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "The classic pivot question!\n\nBefore making a decision, let's examine the situation:\n\n**Pros of pivoting:**\n\n1. **Market size**: You're right that the AI agent market might be larger than your current B2B SaaS tool market.\n2. **Potential for growth**: Pivoting to AI agents could bring in new revenue streams and capitalize on the growing demand for autonomous systems.\n3. **Diversification**: By shifting focus to AI, you'll be reducing your reliance on a single market, making your business more resilient.\n\n**Cons of pivoting:**\n\n1. **Opportunity cost**: Leaving behind a established revenue stream with a proven product can lead to lost revenue and market share.\n2. **Competitive landscape**: The AI agent market is complex and competitive. You'll need to navigate new regulatory, technical, and market challenges.\n3. **Resource allocation**: Pivoting requires significant investments in new technology, talent, and infrastructure, which can divert resources away from your existing product.\n4. **Brand identity**: Your brand is established in the B2B SaaS space. A pivot could lead to confusion among customers and make it harder to reposition your brand.\n\n**Questions to ask yourself:**\n\n1. **What do you know about the AI agent market?** Understand its size, trends, and challenges. Are you familiar with the key players and emerging technologies?\n2. **What's the competitive landscape like?** Research your potential competitors and their strengths, weaknesses, and strategies.\n3. **How will pivoting affect your customers?** Will your AI agent solution be compatible with your existing customer base? Are there potential risks or opportunities for disruption?\n4. **Do you have the necessary resources?** Assess your team's expertise, time, and budget required to develop and launch a new product.\n5. **What's the minimum viable product (MVP) for AI agents?** Can you create a basic version of your AI agent solution with a minimal viable product (MVP) that would allow you to experiment and gather feedback?\n\n**Next steps:**\n\n1. **Conduct market research**: Interview potential customers, partners, and competitors to gain a deeper understanding of the AI agent market.\n2. **Analyze your current product's strengths and weaknesses**: Identify what can be repurposed, modified, or discarded to create a viable AI agent solution.\n3. **Develop a pivot plan**: Create a detailed plan for pivoting, including timelines, resource allocation, and potential milestones.\n4. **Consult with stakeholders**: Engage with your team, investors, and board of directors to gather feedback and ensure everyone is aligned with the pivot plan.\n\nBy taking the time to carefully consider these factors and next steps, you'll be better equipped to make an informed decision about pivoting to focus on AI agents.",
+          "latency": 5876,
+          "tokens": {
+            "prompt": 1206,
+            "completion": 574
+          },
+          "cost_usd": null,
+          "judgment": {
+            "score": 2.5,
+            "breakdown": {
+              "voice_accuracy": 1,
+              "format_compliance": 2,
+              "specificity": 3,
+              "hook_quality": 1
+            },
+            "best_line": "The AI agent market is complex and competitive. You'll need to navigate new regulatory, technical, and market challenges.",
+            "worst_issue": "Completely fails the core task: delivers generic pros/cons analysis instead of 3 sharp, assumption-exposing questions. The 5 questions at the end are obvious and surface-level ('Do you have resources?' is exactly the kind of boring question Melvin avoids). Zero insight into buried assumptions.",
+            "reasoning": "This output ignores the explicit instruction to give exactly 3 sharp questions that expose buried assumptions. Instead it provides conventional advice (pros/cons lists, next steps) that any business consultant would give. The questions included are generic checklist items, not the kind that make users reframe their thinking."
+          }
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "1. What problem are your current customers paying you $1,200/month to solve — and have any of them asked you to stop solving it?\n\n2. If you pivot to AI agents, who specifically will pay you on day one, and why will they choose you over the 300 other AI agent startups that launched this month?\n\n3. What would you learn about your current product in the next 60 days that would make the pivot decision obvious instead of uncertain?",
+          "latency": 2066,
+          "tokens": {
+            "prompt": 1321,
+            "completion": 104
+          },
+          "cost_usd": 0.001841,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 10,
+              "specificity": 8,
+              "hook_quality": 8
+            },
+            "best_line": "If you pivot to AI agents, who specifically will pay you on day one, and why will they choose you over the 300 other AI agent startups that launched this month?",
+            "worst_issue": "Question 1 is slightly predictable (the 'stop solving it' framing is a common founder-advice trope), and question 3 edges toward the obvious 'gather more data' advice rather than exposing a truly buried assumption.",
+            "reasoning": "This response nails the format and delivers three genuinely sharp questions that reframe the pivot decision around customer reality and competitive positioning. Question 2 is exceptional—it forces specificity and exposes the vague market-size reasoning. The set could be slightly more provocative in challenging hidden assumptions about why the founder believes AI agents are 'bigger.'"
+          }
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Refining questions for clarity**\n\nI'm focusing on using simple words and avoiding long context. For the second question, I wonder how a pivot to AI agents would change the value proposition and what I'd measure to know if it's better than the current path. For the third question, I need to ask what would have to be true for this pivot to fail immediately. This question is derived from another question about problem-solving, so it's essential to phrase it clearly.**Crafting clear questions**\n\nI need to formulate three specific questions instead of just providing examples. \n\nFor the first question, I’ll ask, \"Who is the exact person you want to help with AI agents, not just 'businesses'?\" This aligns with identifying the specific target audience. \n\nFor the second, I’ll ask, \"What problem does pivoting to AI agents actually solve for that person, and why is your current product not solving it well enough?\" \n\nLastly, for the third question, I’ll inquire, \"What would have to be true for this pivot to fail immediately?\" I should keep the phrasing straightforward and avoid revealing any advice or conclusions.**Formulating reflective questions**\n\nI need to ensure that the questions require some reflection rather than simple yes or no answers. \n\nFirst, I’ll ask, \"Who exactly are you trying to reach with the AI agents product? Describe their role, job title, pain, and current workaround.\" It's important to use simple words and keep it concise. \n\nFor the second question, I’ll ask, \"What problem does the pivot solve for that person, and why is now the right time to pursue AI agents instead of your current product?\" \n\nLastly, I’ll ask, \"What would have to be true for this pivot to fail immediately?\" I want to make sure not to mix the idea of \"right time\" into the second question.**Refining the toughest question**\n\nI’m recognizing that the third question is often the hardest to formulate. So, I could ask, \"If you pivot and it still fails, what single assumption, if proved false, would kill it instantly?\" This question carries more weight and really challenges the person to think critically. It forces reflection on the core beliefs that underpin their strategy. I want to ensure the question is clear and impactful without overwhelming complexity.**Refining questions on AI pivot**\n\nI want to keep the language simple and avoid lengthy context. For question two, I’m thinking about how a shift to AI agents might change the overall value proposition and what metrics I would need to evaluate its effectiveness compared to the current approach. \n\nAs for question three, I need to phrase it directly: What conditions would lead to immediate failure of this pivot? I'm pulling from a style that focuses on identifying specific problems and targets.**Crafting targeted questions**\n\nI need to refine our focus to create three clear questions. \n\nFor question one, I’ll ask: “Who is the specific person you want to help with AI agents, not just a general category?” \n\nQuestion two will be: “What problem does pivoting to AI agents solve for that person, and why isn’t the current product addressing it adequately?”\n\nFinally, question three will be: “What conditions would lead to immediate failure of this pivot?” I want to keep the phrasing straightforward and avoid revealing any conclusions or advice.**Formulating reflective questions**\n\nI need to create questions that prompt reflection rather than simple yes or no responses. \n\nThe first question will be: “Who exactly are you trying to reach with the AI agents product? Describe their role, job title, pain points, and current workarounds.” I’ll keep the language simple and concise.\n\nFor question two, I’ll ask: “What problem does this pivot solve for that person, and why is it the right time to pursue AI agents over your current product?”\n\nFinally, the third question will be: “What conditions would lead to immediate failure of this pivot?” I want to ensure clarity without mixing concepts.**Reframing the third question**\n\nI recognize that the third question is the most challenging, and framing it correctly is important. I think I could ask: “If you pivot and it still fails, what single assumption, if proven false, would result in immediate failure?” It feels a bit heavier, but I believe it's a crucial perspective to consider. \n\nI need to ensure that my phrasing is clear and prompts deep reflection on the assumptions behind the pivot.",
+          "latency": 20403,
+          "tokens": {
+            "prompt": 1167,
+            "completion": 768
+          },
+          "cost_usd": 0.00036554999999999997,
+          "judgment": {
+            "score": 2.5,
+            "breakdown": {
+              "voice_accuracy": 2,
+              "format_compliance": 1,
+              "specificity": 3,
+              "hook_quality": 2
+            },
+            "best_line": "If you pivot and it still fails, what single assumption, if proven false, would result in immediate failure?",
+            "worst_issue": "Output is a rambling internal monologue showing the thinking process rather than delivering the 3 sharp questions. The user receives meta-commentary about question-crafting instead of the actual questions themselves.",
+            "reasoning": "The output violates the core requirement by presenting thinking/drafting notes instead of a clean, final answer with exactly 3 questions. While some individual questions buried in the text are decent (the assumption-testing one is solid), the format is completely wrong—it reads like unedited brainstorming rather than a polished response."
+          }
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "1. Who exactly is the one person paying you the $1,200 today?\n2. Have you asked the people paying you if they want AI agents?\n3. If you walk away from them, what happens to the trust you built with the people paying you now?",
+          "latency": 33764,
+          "tokens": {
+            "prompt": 1267,
+            "completion": 3066
+          },
+          "cost_usd": 0.0050300250000000005,
+          "judgment": {
+            "score": 7.2,
+            "breakdown": {
+              "voice_accuracy": 8,
+              "format_compliance": 10,
+              "specificity": 6.5,
+              "hook_quality": 7
+            },
+            "best_line": "If you walk away from them, what happens to the trust you built with the people paying you now?",
+            "worst_issue": "Question 2 is somewhat obvious—asking customers if they want a feature is a standard product discovery move, not a buried assumption.",
+            "reasoning": "The output nails format and mostly captures Melvin's voice by avoiding generic advice. Q1 and Q3 expose real assumptions about customer concentration and switching costs, but Q2 feels like surface-level customer validation rather than a perspective-shifting reframe."
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-launch",
+        "name": "Questions before a product launch",
+        "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+        "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+      },
+      "results": [
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "Congratulations on the launch of your AI agent marketplace! Here are some key considerations for your email to the waitlist and Twitter post:\n\n**Email to the Waitlist:**\n\n1. **Build anticipation**: Emphasize the unique value proposition of your marketplace and the exclusive experience your agents offer.\n2. **Share success stories**: Highlight the achievements of your existing agents, such as successful projects or notable clients, to demonstrate the potential for their services.\n3. **Create a sense of FOMO**: Mention the limited spots available and the exclusivity of the waitlist, making people feel like they're part of a coveted group.\n4. **Clearly outline the process**: Explain the onboarding process, agent vetting, and any other relevant details to manage expectations.\n5. **Include a call-to-action (CTA)**: Encourage waitlist members to express interest in becoming an agent or to apply for a spot in the marketplace.\n\nExample Email Structure:\n\nSubject: Be among the first 20 AI agents in our exclusive marketplace\n\nDear [Name],\n\nWe're excited to announce the launch of our AI agent marketplace next Tuesday! Our platform connects innovative agents with businesses and organizations looking for cutting-edge solutions.\n\nAs a valued member of our waitlist, we want to share some success stories from our existing agents:\n\n* [Agent 1] helped [client] improve their [specific area] with a [specific solution]\n* [Agent 2] worked with [client] to develop [specific solution] that increased [desirable outcome]\n\nWe're now opening up spots for new agents to join the marketplace. As a waitlist member, you'll be among the first 20 agents to be considered. To ensure a smooth onboarding process, we'll need to review your application and assess your qualifications.\n\nHere's what you can expect:\n\n* Application review: [briefly outline the application process]\n* Agent vetting: [explain the vetting process]\n* Onboarding: [provide details on the onboarding process]\n\nTo express your interest in becoming an agent or to apply for a spot in the marketplace, please reply to this email by [specific deadline].\n\nDon't miss this opportunity to be part of our exclusive community!\n\nBest regards,\n[Your Name]\n\n**Twitter Post:**\n\n1. **Create a buzz**: Use attention-grabbing headlines or emojis to draw attention to your tweet.\n2. **Highlight the benefits**: Emphasize the advantages of working with your marketplace, such as access to innovative clients, expert guidance, or exclusive resources.\n3. **Use relevant hashtags**: Research and include relevant hashtags to increase the tweet's discoverability.\n4. **Include a CTA**: Encourage interested individuals to follow your Twitter account or visit your website for more information.\n\nExample Twitter Post:\n\n\"🚀 Launching our AI agent marketplace NEXT TUESDAY! 📈 Be among the first to join our exclusive community and get access to innovative clients, expert guidance, and top-notch resources! 🚀 Follow us for updates and to learn more! #AIagentmarketplace #innovation #agility\"\n\n**Additional Tips:**\n\n1. **Make sure your landing page is ready**: Ensure that your landing page accurately reflects the launch and is optimized for conversion.\n2. **Prepare for inquiries**: Have a clear plan for responding to questions and concerns from the waitlist and potential agents.\n3. **Monitor analytics**: Track the performance of your email campaign and Twitter post to refine your strategy for future launches.\n\nBy considering these factors, you'll be well-prepared to create a buzz around your AI agent marketplace launch and attract the attention of interested individuals.",
+          "latency": 6370,
+          "tokens": {
+            "prompt": 1210,
+            "completion": 737
+          },
+          "cost_usd": null,
+          "judgment": {
+            "score": 3.5,
+            "breakdown": {
+              "voice_accuracy": 2,
+              "format_compliance": 7,
+              "specificity": 2,
+              "hook_quality": 2
+            },
+            "best_line": "Ensure that your landing page accurately reflects the launch and is optimized for conversion.",
+            "worst_issue": "Completely misses the task. The prompt asks Melvin to find sharp strategic questions hiding under the surface, not to provide tactical execution advice. Instead of probing whether the 12-agent marketplace is viable, whether 340 waitlist members will convert, or whether the go-to-market strategy is fundamentally sound, the output gives generic email templates and Twitter tips.",
+            "reasoning": "This output fails the core assignment: it's logistics-focused (email structure, hashtags, CTAs) when the task explicitly asks to avoid logistics and surface strategic risks. The response treats the launch as a given rather than interrogating whether it should happen at all or what assumptions are fragile."
+          }
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "1. Of those 340 people on the waitlist, how many have actually used one of your 12 agents — and how many are just interested in the idea?\n\n2. What happens on Wednesday when the first wave of people try to use an agent and something breaks — who owns the response and how fast can they move?\n\n3. If this launches and gets traction, which of your 12 agents will probably fail first, and what will that failure look like to a user?",
+          "latency": 2530,
+          "tokens": {
+            "prompt": 1323,
+            "completion": 107
+          },
+          "cost_usd": 0.0018579999999999998,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 9,
+              "specificity": 7.5,
+              "hook_quality": 8.5
+            },
+            "best_line": "What happens on Wednesday when the first wave of people try to use an agent and something breaks — who owns the response and how fast can they move?",
+            "worst_issue": "Question 3 is slightly softer than the others—'which will probably fail first' assumes failure rather than probing the actual risk assessment or triage logic the team has.",
+            "reasoning": "This nails the core instruction: all three questions bypass logistics and target strategic soundness (product-market fit validation, operational readiness, quality control). The voice is sharp and skeptical without being hostile, and the format is clean. Minor: Q3 could push harder on *why* they haven't stress-tested their weakest agent yet."
+          }
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Crafting questions for AI marketplace**\n\nI'm thinking about launching an AI agent marketplace, with 12 agents and a waitlist of 340. I need to focus on key questions that will help us understand the marketplace dynamics. I want to maintain short and effective questions for our inquiries. \n\nFirst, I'll ask, \"Who is the primary user you’re solving for, and what specific problem does this address?\" This question aligns with our goals and is concise enough to provoke thoughtful responses. \n\nNow, I need to craft two more questions!**Formulating the third question**\n\nNext, I need to craft the second question, which focuses on potential failure indicators. I could ask, \"What would have to be true for the marketplace to fail within the first 24 to 72 hours, and what signs would indicate this?\" \n\nBut then I realize that it may overlap with my earlier thoughts. Hmm, maybe my third question should pivot more radically, like, \"If this launch succeeds, what might still make it a poor decision in retrospect?\" \n\nI really want it to challenge assumptions!**Finalizing the questions set**\n\nI'm creating a set of questions that will guide our inquiry. First, I want to ask, \"Who specifically are you trying to reach — not just the category, but the actual person, and what job are they hiring this AI to perform?\"\n\nFor the second one, I think, \"What would need to be true for this to fail right after launch, and how would you recognize early warning signs?\" \n\nNow, for the third question, it needs a solid reframing. Maybe I should ask, \"If the launch works perfectly, what assumption becomes the riskiest to hold next?\"**Refining the third question**\n\nI think the question I'm working on is coming together nicely. I want to ask, \"If the launch hits all its targets, what critical assumption would you be most afraid to find out was wrong?\" It feels like I'm probing deeply, but maybe it’s a bit long.\n\nI could simplify it while keeping the essence. How about something like, \"What assumption, if proven wrong, would worry you the most even after a successful launch?\" That could tighten it up while maintaining clarity!**Considering AI agent marketplace launch questions**\n\nI need to focus on launching an AI agent marketplace, keeping in mind our 12 agents, a landing page, and a waitlist of 340 people. I should narrow down questions for clarity and impact, hitting key areas like value, onboarding, trust, data privacy, and security. My goal is to ask only three essential questions. \n\nI'll start with: \"Who exactly is the primary user you’re solving for, and what problem are you solving for them right now?\" That seems well-phrased!**Refining launch failure questions**\n\nI'm working on a key question for the AI agent marketplace launch: \"What would have to be true for this to fail immediately?\" Hmm, that's similar to what Melvin already mentioned in the third question. I realize the hardest question should really help reframe everything. \n\nI could ask, \"What would cause users to stop adopting the marketplace within the first week, and how would you detect it?\" Or maybe something like, \"If the launch succeeds, what might still make this a poor decision?\" This could really clarify our thinking!**Formulating strategic questions**\n\nI'm considering a set of important questions for the AI agent marketplace:\n\n1. \"Who exactly are you trying to reach — the specific person, not just the category, and what job are they hiring this AI to do?\"\n  \n2. \"What would have to be true for this to fail immediately after launch, and how would you identify early warning signs?\"\n\n3. I need to refine the third question. Perhaps, \"If everything goes perfectly, what new assumption becomes the riskiest to assume next?\" This could really help us think critically.**Refining critical questions**\n\nI think I have a solid question: \"If the launch hits all targets, what critical assumption would you be most afraid to discover was wrong?\" This really dives into the heart of potential risk. But wait, it does feel a bit long and repetitive.\n\nI should clarify and streamline it. Maybe I can simplify it while keeping the essence. Ultimately, it’s about uncovering underlying fears related to assumptions. I’ll work on making it more concise!",
+          "latency": 21190,
+          "tokens": {
+            "prompt": 1171,
+            "completion": 768
+          },
+          "cost_usd": 0.00036574999999999997,
+          "judgment": {
+            "score": 3.5,
+            "breakdown": {
+              "voice_accuracy": 2,
+              "format_compliance": 2,
+              "specificity": 4,
+              "hook_quality": 3
+            },
+            "best_line": "If the launch works perfectly, what assumption becomes the riskiest to hold next?",
+            "worst_issue": "The output is a meandering internal monologue that never delivers the actual questions Melvin asked for. It shows thinking process rather than sharp, strategic questions that expose whether the marketplace strategy is sound.",
+            "reasoning": "The task requires Melvin to surface strategic questions that reveal soundness of strategy—not logistics. Instead, this output is 90% self-talk and iteration, ending without a clean final set of 3 questions. The few good question fragments get buried in repetitive refinement cycles that violate the 'short and effective' requirement."
+          }
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "1. Who specifically are you trying to reach — not the waitlist, the person?\n2. What problem does this actually solve for them right now?\n3. What would have to be true for this launch to fail immediately?",
+          "latency": 30539,
+          "tokens": {
+            "prompt": 1272,
+            "completion": 2678
+          },
+          "cost_usd": 0.00442572,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 9,
+              "specificity": 7.5,
+              "hook_quality": 8.5
+            },
+            "best_line": "What would have to be true for this launch to fail immediately?",
+            "worst_issue": "Question 2 could be sharper—'right now' is slightly soft; could push harder on whether the problem is acute or manufactured.",
+            "reasoning": "The output nails the core directive: three questions that cut past logistics to expose strategic assumptions. Q1 and Q3 are particularly strong, forcing founder to confront specificity and failure modes rather than vanity metrics."
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-hire",
+        "name": "Questions about a hiring decision",
+        "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+        "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+      },
+      "results": [
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "A great first step! Hiring a Head of Marketing can be a game-changer for your business. Here are some thoughts to consider as you move forward:\n\n**Pros of hiring a Head of Marketing:**\n\n1. **Expertise**: A seasoned Head of Marketing can provide valuable insights and expertise to help you grow your business more efficiently.\n2. **Scalability**: As your business grows, a Head of Marketing can help you scale your marketing efforts, freeing up your time to focus on other areas.\n3. **Objectivity**: A fresh perspective from outside your team can help identify areas for improvement and optimize your marketing strategy.\n4. **Accountability**: A Head of Marketing can take ownership of marketing initiatives, ensuring that goals are met and progress is tracked.\n\n**Cons and considerations:**\n\n1. **Cost**: Hiring a Head of Marketing will require an additional salary expense, which may be a stretch for your current budget.\n2. **Culture fit**: You'll need to ensure that the new Head of Marketing aligns with your company culture and values.\n3. **Bureaucracy**: Introducing a new head of marketing might lead to some initial inefficiencies, such as learning curves and adjusting to new processes.\n\n**Questions to ask yourself before hiring:**\n\n1. **What are my goals?** Are you looking to grow your business quickly, or focus on existing customers?\n2. **What's my current marketing strategy?** Have you been relying on a single tactic or channel, or have you been experimenting with different approaches?\n3. **What are the pain points?** Are there specific areas where you feel stuck or struggling to make progress?\n4. **What's my budget?** You mentioned $180K in the bank, but also $8K MRR. How much of your budget can you realistically allocate to marketing?\n5. **What kind of support do I need?** Do you want someone to take over all marketing efforts, or complement your existing work?\n\n**Next steps:**\n\n1. **Define your marketing priorities**: Based on your goals, current strategy, and pain points, identify the areas where you need the most help.\n2. **Assess your current marketing strengths and weaknesses**: Make a list of what you're doing well and where you need improvement.\n3. **Research potential candidates**: Look for someone with experience in your industry, a track record of success, and a style that aligns with your company culture.\n4. **Prepare a job description**: Outline the responsibilities, requirements, and expectations for the Head of Marketing role.\n5. **Schedule interviews**: Prepare to meet with potential candidates and gauge their fit for your business.\n\nRemember, hiring a Head of Marketing is an investment in your business's future. Take your time, and don't be afraid to ask questions or seek advice from industry experts. Good luck!",
+          "latency": 5072,
+          "tokens": {
+            "prompt": 1205,
+            "completion": 578
+          },
+          "cost_usd": null,
+          "judgment": {
+            "score": 2.5,
+            "breakdown": {
+              "voice_accuracy": 3,
+              "format_compliance": 6,
+              "specificity": 2,
+              "hook_quality": 1
+            },
+            "best_line": "A fresh perspective from outside your team can help identify areas for improvement and optimize your marketing strategy.",
+            "worst_issue": "Completely misses the core task: should surface 3 piercing questions that challenge the assumption that the bottleneck is effort rather than product-market fit. Instead, it validates the hiring impulse and provides generic advice.",
+            "reasoning": "The output fails the fundamental requirement—it never questions whether hiring a Head of Marketing is the right move or whether the real problem is product-market fit, not marketing effort. It reads like generic startup advice rather than the sharp, assumption-challenging guidance Melvin should provide."
+          }
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "1. What specific marketing work are you *not doing* right now because you're out of time — not things you wish existed, but things customers need that aren't happening?\n\n2. If you hired someone tomorrow, what would have to be true about your systems for them to actually move the needle instead of just doing what you're doing now?\n\n3. What would change about your business if growth stayed exactly where it is for the next 18 months?",
+          "latency": 2513,
+          "tokens": {
+            "prompt": 1319,
+            "completion": 99
+          },
+          "cost_usd": 0.0018139999999999999,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 10,
+              "specificity": 8,
+              "hook_quality": 8
+            },
+            "best_line": "If you hired someone tomorrow, what would have to be true about your systems for them to actually move the needle instead of just doing what you're doing now?",
+            "worst_issue": "Question 1 could be more sharply framed to isolate product-market fit assumptions—'things customers need' still allows for the assumption that effort is the constraint.",
+            "reasoning": "The three questions effectively redirect from effort-based bottleneck thinking toward product-market fit and systems constraints. Q2 is particularly strong; Q3 elegantly stress-tests growth assumptions, though Q1 could cut deeper into whether the bottleneck is actually demand or execution."
+          }
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Considering hiring risks**\n\nI'm thinking about the questions surrounding a new hire, especially for a Head of Marketing. What would lead to immediate failure? I need to reframe this to ensure clarity. The first key question is about identifying the specific problem this role addresses and how to measure success in 90 days. Then, I need to think deeply about the ideal candidate, their responsibilities, and collaboration with the team. Lastly, I must consider the risks that could result in this plan failing quickly. Hm, maybe I need to simplify that last part.**Refining hiring questions**\n\nI'm thinking about the three essential questions for hiring a Head of Marketing. First, I need to pinpoint the exact growth challenge this person should address and how to measure success within the first 90 days. Next, I should clarify the ideal candidate's traits, skills, and how they'll help me avoid bottlenecks. Lastly, the third question must focus on what conditions would lead to failure. I could reframe it as, “If this plan fails in 90 days, what single redirection would you choose?” This one feels tricky but crucial.**Crafting precise questions**\n\nI'm working on refining a question to guide the hiring of a Head of Marketing. I want to make sure I’m framing it properly without giving direct advice. I think the first question should be: \"What exact growth problem are you hoping a Head of Marketing will fix, and how will you know it’s fixed in the next 90 days?\" This feels concise and focuses directly on what needs to be achieved, aligning with my intent to keep it straightforward.**Evaluating hiring strategies**\n\nI’m thinking about what would have to be true for hiring a Head of Marketing to fail quickly. I should consider questions like: What problem does this hire solve, and how would I measure success in 90 days? I also want to describe not just a category of person, but the ideal candidate's day-to-day and how they'll help remove bottlenecks. Plus, I'm curious about the contingencies that would prevent this plan from failing. I wonder if I need to simplify the questions a bit.**Refining hiring questions**\n\nI'm rethinking the three essential questions regarding hiring a Head of Marketing. First, I need to clearly define the growth problem this person is meant to solve and how I’ll measure success in 90 days. Second, I want to describe, in detail, the ideal candidate's skills and background, and how they’ll collaborate with me to eliminate bottlenecks. Lastly, I should focus on potential failure: if the plan doesn't work, what single redirection could I take as the best response? This question is definitely the hardest.**Crafting effective questions**\n\nI'm focusing on crafting questions that avoid giving direct advice. The first question I want to ask is, \"What exact growth problem do you expect a Head of Marketing to solve, and how will you measure if it's resolved within the next 90 days?\" I think it’s essential to keep it clear and straightforward so the person understands what I'm really getting at without feeling pressured to act immediately. Let’s stick to just questions to encourage their own thinking!",
+          "latency": 17482,
+          "tokens": {
+            "prompt": 1166,
+            "completion": 768
+          },
+          "cost_usd": 0.0003655,
+          "judgment": {
+            "score": 3.5,
+            "breakdown": {
+              "voice_accuracy": 4,
+              "format_compliance": 2,
+              "specificity": 4,
+              "hook_quality": 3
+            },
+            "best_line": "What exact growth problem do you expect a Head of Marketing to solve, and how will you measure if it's resolved within the next 90 days?",
+            "worst_issue": "Output is a rambling internal monologue that never delivers the 3 clean questions promised. The task explicitly asks to 'surface the 3 questions' but instead provides thinking-out-loud that obscures rather than clarifies the core insight about PMF vs. effort.",
+            "reasoning": "The output fails the core requirement: it should present 3 sharp, distinct questions that challenge the 'bottleneck = effort' assumption and redirect toward PMF. Instead, it's a verbose thinking process that repeats similar questions across multiple sections without ever cleanly surfacing the three distinct questions or addressing the PMF reframe that's central to the task."
+          }
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "1. What work are you doing now that you want to stop?\n2. What number changes in 30 days if they start?\n3. What happens if you stop touching the marketing?",
+          "latency": 38994,
+          "tokens": {
+            "prompt": 1266,
+            "completion": 2905
+          },
+          "cost_usd": 0.00477867,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 10,
+              "specificity": 8,
+              "hook_quality": 8
+            },
+            "best_line": "What happens if you stop touching the marketing?",
+            "worst_issue": "Question 2 is slightly vague—'what number' could be clarified (MRR? customers? pipeline?) to force more concrete thinking.",
+            "reasoning": "These three questions effectively reframe the bottleneck assumption by probing effort allocation, measurable impact, and true dependency. The format is clean and the voice matches the directive to cut through surface-level thinking, though Q2 could be more specific about which metric matters most."
+          }
+        }
+      ]
+    }
+  ]
+}

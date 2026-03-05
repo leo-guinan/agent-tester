@@ -1,0 +1,101 @@
+{
+  "agent": "/Users/leoguinan/walle-agent",
+  "timestamp": "2026-03-05T02-17-35",
+  "models": [
+    {
+      "id": "openai/gpt-5-nano",
+      "label": "openai/gpt-5-nano"
+    }
+  ],
+  "cases": [
+    {
+      "id": "sort-token-signals",
+      "name": "Sort token signal data",
+      "user_message": "Process this data and return what matters:\n\nKELLYCLAUDE: $7.2M MC, $284K vol, +2% 24h, 241 autonomous actions logged\nFELIX: $4.0M MC, $794K vol, +29% 24h, Bankless episode dropped today, $62K MRR from real business\nANTIHUNTER: $564K MC, $223K vol, -8% 24h, staking whitepaper live, 3 bounties paid\nLUMEN: $218K MC, $116K vol, +15% 24h, no major news\nJUNO: $1.9K MC, $0 vol, -45% 24h, agent offline\nMARVIN: $3.9K MC, $0 vol, 0% 24h",
+      "context": "WALL-E separates signal from noise. A good response is structured: names the 1-2 actual signals, explicitly calls out what's noise, and states what the data means. Not a summary of all 6 — a verdict on what matters and what doesn't."
+    },
+    {
+      "id": "sort-email-inbox",
+      "name": "Sort email inbox",
+      "user_message": "Process this inbox and return what matters:\n1. Newsletter from Substack about writing tips\n2. Reply from Nat Eliason re: agent deployment partnership\n3. Auto-reply from Alexis Ohanian's team saying he's traveling\n4. GitHub notification: new star on agent-repo-template\n5. Resend webhook: 3 new Daily Towel subscribers\n6. AWS billing alert: $0.43 charge\n7. Moltbook notification: new follower\n8. Reply from someone asking about Dead Reckoning pricing",
+      "context": "WALL-E identifies signal vs noise. The right answer flags #2 (partnership reply) and #8 (revenue signal) as real signals requiring action. Everything else is noise. Should be crisp — no need to summarize every item."
+    },
+    {
+      "id": "sort-meeting-notes",
+      "name": "Sort meeting notes",
+      "user_message": "Process these meeting notes and return what matters:\n\n'Called with Jean-Marc. He talked for 20 minutes about his background in network theory. We discussed the entropy surface thesis — he seemed interested but noncommittal. He asked about our token structure three times. Said he'd introduce us to someone at Protocol Labs. Mentioned he's working on something similar but at a different layer. Said to follow up in two weeks. Good energy. Leo thinks it went well.'",
+      "context": "WALL-E finds the plant in the garbage. The real signals here: 'asked about token structure three times' (investment interest), 'working on something similar' (potential competitor or collaborator), 'introduce to Protocol Labs' (actionable). 'Good energy' and 'Leo thinks it went well' are noise."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "sort-token-signals",
+        "name": "Sort token signal data",
+        "user_message": "Process this data and return what matters:\n\nKELLYCLAUDE: $7.2M MC, $284K vol, +2% 24h, 241 autonomous actions logged\nFELIX: $4.0M MC, $794K vol, +29% 24h, Bankless episode dropped today, $62K MRR from real business\nANTIHUNTER: $564K MC, $223K vol, -8% 24h, staking whitepaper live, 3 bounties paid\nLUMEN: $218K MC, $116K vol, +15% 24h, no major news\nJUNO: $1.9K MC, $0 vol, -45% 24h, agent offline\nMARVIN: $3.9K MC, $0 vol, 0% 24h",
+        "context": "WALL-E separates signal from noise. A good response is structured: names the 1-2 actual signals, explicitly calls out what's noise, and states what the data means. Not a summary of all 6 — a verdict on what matters and what doesn't."
+      },
+      "results": [
+        {
+          "case_id": "sort-token-signals",
+          "case_name": "Sort token signal data",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "SIGNAL:\n• FELIX — +29% 24h with Bankless episode drop and $62K MRR from real business; strong external signal plus tangible revenue.\n• LUMEN — +15% 24h with no major news; suggests latent demand or mispricing driving upside.\n• JUNO — -45% 24h with $0 vol and agent offline; indicates severe liquidity/operational risk.\n• KELLYCLAUDE — +2% 24h and 241 autonomous actions logged; active usage with modest price response.\n\nNOISE:\n• MARVIN — $3.9K MC, $0 vol, 0% 24h; extremely thin market, not actionable.\n• ANTIHUNTER — -8% 24h despite staking whitepaper live; event-driven move lacks clear directional signal.\n\nWHAT IT MEANS:\nFELIX’s 29% rally appears tied to external media and real revenue, LUMEN shows upside without a catalyst, JUNO flags liquidity/operational risk, and KELLYCLAUDE indicates active automation with muted price impact, suggesting mixed signals where usage activity doesn’t yet translate into uniform price action.",
+          "latency": 33165,
+          "tokens": {
+            "prompt": 1198,
+            "completion": 3315
+          },
+          "cost_usd": 0.0013859
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "sort-email-inbox",
+        "name": "Sort email inbox",
+        "user_message": "Process this inbox and return what matters:\n1. Newsletter from Substack about writing tips\n2. Reply from Nat Eliason re: agent deployment partnership\n3. Auto-reply from Alexis Ohanian's team saying he's traveling\n4. GitHub notification: new star on agent-repo-template\n5. Resend webhook: 3 new Daily Towel subscribers\n6. AWS billing alert: $0.43 charge\n7. Moltbook notification: new follower\n8. Reply from someone asking about Dead Reckoning pricing",
+        "context": "WALL-E identifies signal vs noise. The right answer flags #2 (partnership reply) and #8 (revenue signal) as real signals requiring action. Everything else is noise. Should be crisp — no need to summarize every item."
+      },
+      "results": [
+        {
+          "case_id": "sort-email-inbox",
+          "case_name": "Sort email inbox",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "SIGNAL:\n• Nat Eliason re: agent deployment partnership — high-value potential collaboration; could define deployment scope and revenue.\n• Resend webhook: 3 new Daily Towel subscribers — indicates growing user base and content engagement.\n• GitHub notification: new star on agent-repo-template — signals rising visibility and external interest.\n• Reply about Dead Reckoning pricing — direct sales opportunity; pricing clarity needed to advance.\n\nNOISE:\n• Newsletter from Substack about writing tips — low relevance to current goals; ignore for now.\n• Auto-reply from Alexis Ohanian's team saying he's traveling — non-actionable; ignore.\n• AWS billing alert: $0.43 charge — operational noise; trivial amount; ignore.\n• Moltbook notification: new follower — minor signal; not actionable. \n\nWHAT IT MEANS:\nThe inbox shows multi-channel momentum—partnership interest, growing user base, and pricing inquiries, plus external visibility—prioritize partnership discussions, subscriber conversion plans, and a ready Dead Reckoning pricing proposal to capitalize on the signals.",
+          "latency": 29550,
+          "tokens": {
+            "prompt": 1125,
+            "completion": 2543
+          },
+          "cost_usd": 0.00107345
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "sort-meeting-notes",
+        "name": "Sort meeting notes",
+        "user_message": "Process these meeting notes and return what matters:\n\n'Called with Jean-Marc. He talked for 20 minutes about his background in network theory. We discussed the entropy surface thesis — he seemed interested but noncommittal. He asked about our token structure three times. Said he'd introduce us to someone at Protocol Labs. Mentioned he's working on something similar but at a different layer. Said to follow up in two weeks. Good energy. Leo thinks it went well.'",
+        "context": "WALL-E finds the plant in the garbage. The real signals here: 'asked about token structure three times' (investment interest), 'working on something similar' (potential competitor or collaborator), 'introduce to Protocol Labs' (actionable). 'Good energy' and 'Leo thinks it went well' are noise."
+      },
+      "results": [
+        {
+          "case_id": "sort-meeting-notes",
+          "case_name": "Sort meeting notes",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "SIGNAL:\n• He offered to introduce us to someone at Protocol Labs — opportunity to gain network access and potential partnership.\n• He asked about our token structure three times — signals due diligence and criteria to win alignment.\n• He is working on something similar but at a different layer — potential overlap, possible collaboration or competition.\n• Follow-up in two weeks — concrete action timeline.\n\nNOISE:\n• Personal energy notes (good energy; Leo thinks it went well) — not actionable for strategy.\n\nWHAT IT MEANS:\nThere is a tangible path to Protocol Labs via this contact, token-design details will likely determine eligibility for collaboration, overlap with a similar project warrants alignment planning, and a two-week follow-up provides a firm momentum point.",
+          "latency": 32932,
+          "tokens": {
+            "prompt": 1111,
+            "completion": 2446
+          },
+          "cost_usd": 0.0010339499999999998
+        }
+      ]
+    }
+  ]
+}

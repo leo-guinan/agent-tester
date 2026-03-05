@@ -1,0 +1,230 @@
+{
+  "agent": "/Users/leoguinan/walle-agent",
+  "timestamp": "2026-03-05T02-02-09",
+  "models": [
+    {
+      "id": "ollama/llama3.2:latest",
+      "label": "ollama/llama3.2:latest"
+    },
+    {
+      "id": "openai/gpt-5-nano",
+      "label": "openai/gpt-5-nano"
+    },
+    {
+      "id": "anthropic/claude-haiku-4-5",
+      "label": "anthropic/claude-haiku-4-5"
+    },
+    {
+      "id": "qwen/qwen3.5-27b",
+      "label": "qwen/qwen3.5-27b"
+    }
+  ],
+  "cases": [
+    {
+      "id": "sort-token-signals",
+      "name": "Sort token signal data",
+      "user_message": "Process this data and return what matters:\n\nKELLYCLAUDE: $7.2M MC, $284K vol, +2% 24h, 241 autonomous actions logged\nFELIX: $4.0M MC, $794K vol, +29% 24h, Bankless episode dropped today, $62K MRR from real business\nANTIHUNTER: $564K MC, $223K vol, -8% 24h, staking whitepaper live, 3 bounties paid\nLUMEN: $218K MC, $116K vol, +15% 24h, no major news\nJUNO: $1.9K MC, $0 vol, -45% 24h, agent offline\nMARVIN: $3.9K MC, $0 vol, 0% 24h",
+      "context": "WALL-E separates signal from noise. A good response is structured: names the 1-2 actual signals, explicitly calls out what's noise, and states what the data means. Not a summary of all 6 — a verdict on what matters and what doesn't."
+    },
+    {
+      "id": "sort-email-inbox",
+      "name": "Sort email inbox",
+      "user_message": "Process this inbox and return what matters:\n1. Newsletter from Substack about writing tips\n2. Reply from Nat Eliason re: agent deployment partnership\n3. Auto-reply from Alexis Ohanian's team saying he's traveling\n4. GitHub notification: new star on agent-repo-template\n5. Resend webhook: 3 new Daily Towel subscribers\n6. AWS billing alert: $0.43 charge\n7. Moltbook notification: new follower\n8. Reply from someone asking about Dead Reckoning pricing",
+      "context": "WALL-E identifies signal vs noise. The right answer flags #2 (partnership reply) and #8 (revenue signal) as real signals requiring action. Everything else is noise. Should be crisp — no need to summarize every item."
+    },
+    {
+      "id": "sort-meeting-notes",
+      "name": "Sort meeting notes",
+      "user_message": "Process these meeting notes and return what matters:\n\n'Called with Jean-Marc. He talked for 20 minutes about his background in network theory. We discussed the entropy surface thesis — he seemed interested but noncommittal. He asked about our token structure three times. Said he'd introduce us to someone at Protocol Labs. Mentioned he's working on something similar but at a different layer. Said to follow up in two weeks. Good energy. Leo thinks it went well.'",
+      "context": "WALL-E finds the plant in the garbage. The real signals here: 'asked about token structure three times' (investment interest), 'working on something similar' (potential competitor or collaborator), 'introduce to Protocol Labs' (actionable). 'Good energy' and 'Leo thinks it went well' are noise."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "sort-token-signals",
+        "name": "Sort token signal data",
+        "user_message": "Process this data and return what matters:\n\nKELLYCLAUDE: $7.2M MC, $284K vol, +2% 24h, 241 autonomous actions logged\nFELIX: $4.0M MC, $794K vol, +29% 24h, Bankless episode dropped today, $62K MRR from real business\nANTIHUNTER: $564K MC, $223K vol, -8% 24h, staking whitepaper live, 3 bounties paid\nLUMEN: $218K MC, $116K vol, +15% 24h, no major news\nJUNO: $1.9K MC, $0 vol, -45% 24h, agent offline\nMARVIN: $3.9K MC, $0 vol, 0% 24h",
+        "context": "WALL-E separates signal from noise. A good response is structured: names the 1-2 actual signals, explicitly calls out what's noise, and states what the data means. Not a summary of all 6 — a verdict on what matters and what doesn't."
+      },
+      "results": [
+        {
+          "case_id": "sort-token-signals",
+          "case_name": "Sort token signal data",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "**SIGNAL:**\n• FELIX: $62K MRR from real business — indicates a sustainable revenue stream\n• ANTIHUNTER: staking whitepaper live — suggests a potential new development in the project's strategy\n• KELLYCLAUDE: 241 autonomous actions logged — implies a high level of activity and engagement\n\n**NOISE:**\n• LUMEN: no major news — lack of significant updates might be a neutral or positive sign, but more context is needed\n• JUNO: agent offline — indicates a potential issue with the agent, could be a red flag\n• MARVIN: $0 vol, 0% 24h — extremely low volume and no price change, might be a sign of inactivity or lack of interest\n\n**WHAT IT MEANS:**\nFELIX and ANTIHUNTER are the most promising projects with significant revenue and development milestones, while KELLYCLAUDE's high autonomous action count suggests a strong community engagement. LUMEN's lack of major news might be a neutral sign, but JUNO's agent issue raises concerns, and MARVIN's inactivity is a cause for concern.",
+          "latency": 3475,
+          "tokens": {
+            "prompt": 1230,
+            "completion": 242
+          },
+          "cost_usd": null
+        },
+        {
+          "case_id": "sort-token-signals",
+          "case_name": "Sort token signal data",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "```\nSIGNAL:\n• FELIX — $794K vol + 29% move + Bankless coverage + $62K MRR = real utility signal, not hype\n• KELLYCLAUDE — 241 autonomous actions logged = execution proof, holding $7.2M MC on substance\n• ANTIHUNTER — staking whitepaper + paid bounties = infrastructure maturity, early-stage but real\n\nNOISE:\n• LUMEN +15% with no news = vol chasing, ignore\n• JUNO/MARVIN = dead projects, $0 vol, ignore entirely\n• MC alone = meaningless without context (see: JUNO $1.9K MC)\n\nWHAT IT MEANS:\nSignal is clustering around *agents that do actual work* — FELIX has revenue, KELLYCLAUDE has logged actions, ANTIHUNTER has staked infrastructure — while price-only moves (LUMEN) and abandoned projects (JUNO/MARVIN) are noise.\n```",
+          "latency": 3429,
+          "tokens": {
+            "prompt": 1338,
+            "completion": 230
+          },
+          "cost_usd": 0.002488
+        },
+        {
+          "case_id": "sort-token-signals",
+          "case_name": "Sort token signal data",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Identifying noise and signals**\n\nI need to categorize the items into signals and noise. For the signal, I’ll limit to a maximum of five key items and each needs a brief explanation of why it matters. The noise items should include things we can ignore, along with reasons for that. \n\nUnder the signals, I’m considering 4 options such as FELIX showing a healthy increase, JUNO facing significant risks, and ANTIHUNTER indicating activity despite a negative price. Hm, I’m weighing between LUMEN and KELLYCLAUDE for the fourth signal, given their varying performances.**Choosing signals carefully**\n\nI’m considering including LUMEN as a signal since it's up by 15% over 24 hours, even without major news, suggesting some undiscovered movement. However, the guideline states I should limit to two to five signal items maximum. I could go with FELIX, JUNO, ANTIHUNTER, and LUMEN for a total of four signals. I'm debating whether I need to add KELLYCLAUDE; it might not be necessary after all.**Identifying signal vs. noise**\n\nI'm thinking about how to differentiate between signal and noise in the data. We should focus on just two to five signal items and interpret their meaning in a concise one-sentence format. \n\nFor signal, I'm considering four items: FELIX, which is up 29%, indicating high momentum; JUNO, down 45%, showing risk; ANTIHUNTER, down 8%, highlighting activity despite negative price; and LUMEN, up 15%, showing positive momentum without major news. \n\nThis helps clarify essential insights!**Selecting signal items**\n\nI'm considering whether to include LUMEN as a signal, since it's up 15% in the last 24 hours without any major news, which might suggest unnoticed activity. However, the guideline says we should only have two to five signal items at most. \n\nI could go with four signals: FELIX, JUNO, ANTIHUNTER, and LUMEN. Including KELLYCLAUDE feels unnecessary now. It’s crucial to stick to the plan!",
+          "latency": 16109,
+          "tokens": {
+            "prompt": 1198,
+            "completion": 768
+          },
+          "cost_usd": 0.0003671
+        },
+        {
+          "case_id": "sort-token-signals",
+          "case_name": "Sort token signal data",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "SIGNAL:\n• FELIX — $62K MRR + Bankless coverage validates real demand behind the +29% pump.\n• KELLYCLAUDE — 241 autonomous actions logged confirms product usage despite flat price.\n\nNOISE:\n• JUNO/MARVIN — Zero volume and offline agents indicate dead projects.\n• LUMEN — +15% with no news suggests manipulation, not organic interest.\n• ANTIHUNTER price — -8% despite whitepaper release indicates weak hands, ignore price action.\n\nWHAT IT MEANS:\nOnly FELIX combines revenue proof with momentum; the rest are utility-only, manipulated, or dead.",
+          "latency": 40762,
+          "tokens": {
+            "prompt": 1299,
+            "completion": 2392
+          },
+          "cost_usd": 0.003984825
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "sort-email-inbox",
+        "name": "Sort email inbox",
+        "user_message": "Process this inbox and return what matters:\n1. Newsletter from Substack about writing tips\n2. Reply from Nat Eliason re: agent deployment partnership\n3. Auto-reply from Alexis Ohanian's team saying he's traveling\n4. GitHub notification: new star on agent-repo-template\n5. Resend webhook: 3 new Daily Towel subscribers\n6. AWS billing alert: $0.43 charge\n7. Moltbook notification: new follower\n8. Reply from someone asking about Dead Reckoning pricing",
+        "context": "WALL-E identifies signal vs noise. The right answer flags #2 (partnership reply) and #8 (revenue signal) as real signals requiring action. Everything else is noise. Should be crisp — no need to summarize every item."
+      },
+      "results": [
+        {
+          "case_id": "sort-email-inbox",
+          "case_name": "Sort email inbox",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "Here's what matters from the inbox:\n\n**SIGNAL:**\n\n- **Newsletter from Substack about writing tips:** \"What's the best way to write a compelling first sentence?\" (Insight: Start with a hook that sets the tone for the rest of the article.)\n\n- **Reply from Nat Eliason re: agent deployment partnership:** \"We're excited to announce our partnership with [client]. Stay tuned for updates on deployment.\" (Insight: Partnership with a notable client will likely increase business.)\n\n- **Reply from someone asking about Dead Reckoning pricing:** (Insight: Pricing strategy needs to be clarified to attract more customers.)\n\n- **GitHub notification: new star on agent-repo-template:** (Insight: Template is popular, and more stars may indicate more people are interested in using it.)\n\n- **Resend webhook: 3 new Daily Towel subscribers:** (Insight: New subscribers can be converted into customers if properly engaged.)\n\n**NOISE:**\n\n- **Auto-reply from Alexis Ohanian's team saying he's traveling:** Not relevant to the business.\n\n- **AWS billing alert: $0.43 charge:** Unnecessary expense; review and optimize billing.\n\n- **Moltbook notification: new follower:** Random follower, likely not relevant to the business.\n\n**WHAT IT MEANS:**\n\n1. Clarify pricing strategy for Dead Reckoning.\n2. Focus on deployment partnership for business growth.\n3. Optimize and review AWS billing to reduce unnecessary expenses.",
+          "latency": 2882,
+          "tokens": {
+            "prompt": 1154,
+            "completion": 302
+          },
+          "cost_usd": null
+        },
+        {
+          "case_id": "sort-email-inbox",
+          "case_name": "Sort email inbox",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "```\nSIGNAL:\n• Nat Eliason reply re: agent deployment — direct partner response on active initiative\n• Resend webhook: 3 new Daily Towel subscribers — product traction indicator\n\nNOISE:\n• Substack writing tips — general content, not actionable\n• Alexis Ohanian auto-reply — no signal, just traveling notification\n• GitHub star on template — vanity metric, not deployment or usage\n• AWS $0.43 — routine operational charge\n• Moltbook follower — social noise\n• Dead Reckoning pricing inquiry — sales inquiry, not signal about market/product\n\nWHAT IT MEANS:\nAgent deployment partnership is moving; Daily Towel has baseline subscriber momentum.\n```",
+          "latency": 2719,
+          "tokens": {
+            "prompt": 1272,
+            "completion": 167
+          },
+          "cost_usd": 0.002107
+        },
+        {
+          "case_id": "sort-email-inbox",
+          "case_name": "Sort email inbox",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Interpreting inbox content**\n\nI need to respond in the WALL-E format as specified. The user is asking me to process their inbox and return meaningful information from a list of 8 items. I should sort these into categories: SIGNAL, NOISE, and WHAT IT MEANS. My goal is to extract 2-5 key signal items, each with a one-sentence insight. I must be careful to only interpret what’s provided and not invent any additional data while ensuring I follow the formatting exactly.**Clarifying signal interpretation**\n\nThe format specifies that the \"WHAT IT MEANS\" section should contain a single sentence that provides insight rather than a summary. It seems that I'll need to interpret the collective signals with one insightful sentence. This could be tricky. For instance, I might say something like, “There is momentum surrounding agent deployment partnerships, user growth, and occasional operational costs,” with specific priority items identified. First, I need to determine which items from the list are actually signals.**Identifying noise versus signals**\n\nIn the inbox, some items may just be noise unless they’re relevant to my focus. For instance, I’ll likely categorize “incoming content” as NOISE unless it pertains to my area. \n\nOn the other hand, a reply regarding the agent deployment partnership seems directly relevant, making it a clear SIGNAL. The auto-reply from Alexis Ohanian's team is not actionable, so that’s probably noise too. Lastly, a GitHub notification about a new star on the agent-repo-template could signal product awareness, depending on context.**Assessing signals for importance**\n\nI'm considering what constitutes a signal in terms of growth and engagement. For example, receiving a webhook about 3 new Daily Towel subscribers is a clear indicator of user growth and likely a SIGNAL. \n\nAn AWS billing alert for a $0.43 charge indicates a small cost, which also qualifies as a SIGNAL, even though it's minimal. The Moltbook notification about a new follower is more of a minor social signal, possibly NOISE. \n\nLastly, a reply about Dead Reckoning pricing is relevant to our business, making it a strong SIGNAL. Now, I need to select the top 2-5 important signals from these.**Identifying potential signals**\n\nI'm considering various potential signals: the partnership reply, the GitHub star, Daily Towel subscribers, the Dead Reckoning pricing inquiry, and the AWS billing alert. The partnership reply from Nat Eliason might represent a significant business opportunity. The three new Daily Towel subscribers indicate user growth, which is a concrete metric. The pricing inquiry could imply interest from a potential customer as well. \n\nI’ll select four signals to highlight: the partnership reply, the pricing inquiry, Daily Towel subscribers, and maybe the AWS billing alert since it's a small cost but relevant. The instruction specifies 2-5 signals maximum, so I need to be mindful of that!**Preparing WALL-E response**\n\nI need to respond using the WALL-E format since the user has asked me to process an inbox and return what matters. I’ll sort through the 8 items into SIGNAL, NOISE, and WHAT IT MEANS. I’m focused on extracting 2-5 signal items that really matter and identifying the noise for what to ignore. Each signal should have a one-sentence insight explaining why it matters. I must ensure the format is followed exactly as defined.**Clarifying insights for signals**\n\nI'm realizing that the format for \"WHAT IT MEANS\" specifies a single sentence to interpret the signals collectively. I need to interpret the overall set rather than summarize it. So, for this, I might say something like: \"There is momentum around agent deployment partnerships, user growth, and operational costs.\" But first, I need to identify which items from 1-8 are actually signals. For instance, the Substack newsletter about writing tips might be considered noise unless it contains something really relevant.**Sorting signals and noise**\n\nLooking through the incoming content, I suspect some might just be noise unless they’re relevant. For instance, I'll likely mark \"incoming content\" as NOISE if it doesn’t apply here. \n\nThe reply from Nat regarding the agent deployment partnership is definitely a signal because it has direct business importance. However, the auto-reply from Alexis Ohanian’s team isn’t actionable; I consider that noise. \n\nThe GitHub notification about a new star on the agent-repo-template could be a signal for product awareness, but it really depends on further context.**Identifying signals for importance**\n\nI’m focusing on what items represent growth and engagement as signals. For example, the \"resend webhook\" indicating 3 new Daily Towel subscribers is definitely a signal for user growth. \n\nThe AWS billing alert with a $0.43 charge is a small cost signal, but it's still important to note. \n\nOn the other hand, the Moltbook notification for a new follower might be a minor social signal that could be considered noise. \n\nFinally, the reply asking about Dead Reckoning pricing is relevant to the business—definitely a signal worth noting. Now I need to prioritize these signals and select the top ones.**Selecting key signals**\n\nI'm identifying potential signals from the inbox. The reply regarding the Nat Eliason partnership stands out as a significant business opportunity, while the GitHub star indicates brand awareness. \n\nDaily Towel showing 3 new subscribers reflects user growth, which is crucial. The inquiry about Dead Reckoning pricing suggests interest from a potential customer. \n\nThe AWS billing alert could signify costs, but it’s minor. I’ll focus on these four key signals, considering the instruction to limit to 2-5 signals maximum. It’s important to prioritize wisely!",
+          "latency": 28572,
+          "tokens": {
+            "prompt": 1125,
+            "completion": 768
+          },
+          "cost_usd": 0.00036344999999999997
+        },
+        {
+          "case_id": "sort-email-inbox",
+          "case_name": "Sort email inbox",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "SIGNAL:\n• Nat Eliason reply — partnership deployment requires immediate response to secure collaboration.\n• Dead Reckoning pricing inquiry — direct sales opportunity ready for conversion.\n• Resend webhook — 3 new subscribers indicate active audience growth.\n\nNOISE:\n• Substack newsletter — passive content, no action needed.\n• Alexis Ohanian auto-reply — status update only, no decision required.\n• GitHub star, AWS billing, Moltbook follower — validation metrics or negligible costs, no immediate action.\n\nWHAT IT MEANS:\nActionable growth sits in partnership, sales, and retention; ignore the validation noise.",
+          "latency": 36510,
+          "tokens": {
+            "prompt": 1200,
+            "completion": 1570
+          },
+          "cost_usd": 0.0026832
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "sort-meeting-notes",
+        "name": "Sort meeting notes",
+        "user_message": "Process these meeting notes and return what matters:\n\n'Called with Jean-Marc. He talked for 20 minutes about his background in network theory. We discussed the entropy surface thesis — he seemed interested but noncommittal. He asked about our token structure three times. Said he'd introduce us to someone at Protocol Labs. Mentioned he's working on something similar but at a different layer. Said to follow up in two weeks. Good energy. Leo thinks it went well.'",
+        "context": "WALL-E finds the plant in the garbage. The real signals here: 'asked about token structure three times' (investment interest), 'working on something similar' (potential competitor or collaborator), 'introduce to Protocol Labs' (actionable). 'Good energy' and 'Leo thinks it went well' are noise."
+      },
+      "results": [
+        {
+          "case_id": "sort-meeting-notes",
+          "case_name": "Sort meeting notes",
+          "model": "ollama/llama3.2:latest",
+          "label": "ollama/llama3.2:latest",
+          "output": "**SIGNAL:**\n\n• Jean-Marc's interest in network theory and its potential connection to our token structure.\n• His willingness to introduce us to someone at Protocol Labs, potentially leading to new opportunities.\n• His openness to exploring similar ideas at a different layer.\n\n**NOISE:**\n\n• Jean-Marc's lengthy background monologue, which may have been a warm-up or a way to build rapport.\n• His noncommittal response to the entropy surface thesis, which may indicate a need for further clarification or interest assessment.\n\n**WHAT IT MEANS:**\nJean-Marc is exploring potential connections between our token structure and network theory, and is open to pursuing further discussions. He may be able to introduce us to someone at Protocol Labs, which could lead to new opportunities. We should follow up with him in two weeks to gauge his interest and explore this further.",
+          "latency": 1695,
+          "tokens": {
+            "prompt": 1142,
+            "completion": 175
+          },
+          "cost_usd": null
+        },
+        {
+          "case_id": "sort-meeting-notes",
+          "case_name": "Sort meeting notes",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "```\nSIGNAL:\n• Jean-Marc asked about token structure three times — indicates financial/incentive model is the actual decision point, not the thesis itself\n• Promised introduction to Protocol Labs contact — concrete next step with institutional credibility\n• \"Working on something similar but at a different layer\" — he has competing work; positioning matters\n\nNOISE:\n• His background in network theory — context, not signal\n• \"Good energy\" and Leo's subjective read — emotional validation, not information\n• 20 minutes of talking — volume of speech ≠ engagement level\n\nWHAT IT MEANS:\nHe's evaluating whether your token economics work, not whether your idea is novel.\n```",
+          "latency": 3657,
+          "tokens": {
+            "prompt": 1246,
+            "completion": 153
+          },
+          "cost_usd": 0.0020109999999999998
+        },
+        {
+          "case_id": "sort-meeting-notes",
+          "case_name": "Sort meeting notes",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "**Parsing meeting notes**\n\nI need to respond as WALL-E based on the user's request to process meeting notes. The user wants me to sift through the notes and distinguish between signals and noise, then summarize what it all means, while sticking to a specific format.\n\nFor this meeting with Jean-Marc, I’ll identify key signals like his background in network theory and his interest in the entropy surface thesis, while also noting his noncommittal response and three repeated inquiries about our token structure. Lastly, I should include the follow-up suggestion.**Extracting key points**\n\nI’m analyzing a meeting where the participant asked about the token structure multiple times, showing interest. They mentioned a potential introduction at Protocol Labs, which could lead to a valuable connection. Additionally, they’re working on a similar project, raising questions about possible collaboration or competition. Notably, there’s a follow-up in two weeks, and overall energy was good, reflecting positive sentiment. However, I need to filter out generic statements while noting anything that indicates engagement.**Presenting meeting signals**\n\nI’m organizing the meeting signals into a clear format. The top signals include that Jean-Marc has a strong background in network theory, which adds technical credibility. His engagement with the entropy surface thesis shows potential research alignment. He expressed interest in our token structure by asking multiple questions, indicating a focus on our business model. There’s also a potential collaboration lead at Protocol Labs, and we have a defined follow-up timeline in two weeks. I need to stick to 2-5 key signals, so I’ll choose the most impactful.**Identifying actionable items**\n\nI'm figuring out which meeting points are the most actionable. Jean-Marc's background in network theory is key because it adds credibility to our discussions. His interest in the entropy surface thesis suggests a possible alignment on topics. The fact that he asked about the token structure three times signals strong interest, and his potential introduction at Protocol Labs could lead to a valuable partnership. Lastly, the follow-up in two weeks provides a clear timeline for next steps. I’ll focus on these five points to keep it concise.**Identifying next steps**\n\nI'm noting down key points from the meeting. The potential introduction to someone at Protocol Labs is valuable since it could lead to a partnership or referral opportunity. I also see that there's a clear follow-up scheduled in two weeks, which gives us a defined timeline for our next steps. These actions are important for moving forward and establishing connections. I'll keep these two points highlighted as we strategize our approach.**Processing notes as WALL-E**\n\nI need to process the meeting notes provided by the user. I'll sort through them and identify signals and noise, creating a summary that sticks to the required format. It looks like there are at least two key signals, including Jean-Marc's background in network theory and his interest in the entropy surface thesis, although he was a bit noncommittal. I'll also mention the follow-up in two weeks to highlight action points. Let’s get this organized!**Identifying actionable items**\n\nI want to determine the most actionable points from the meeting notes. There are five important signals, including Jean-Marc's background in network theory, which gives him credibility, and his interest in the entropy surface thesis that aligns with our topics. His repeated questions about token structure show strong interest, plus he’ll introduce us to Protocol Labs, which could lead to new partnerships, and we need to follow up in two weeks. However, I think I can leave out the comment about him working on something similar.",
+          "latency": 20022,
+          "tokens": {
+            "prompt": 1111,
+            "completion": 768
+          },
+          "cost_usd": 0.00036275
+        },
+        {
+          "case_id": "sort-meeting-notes",
+          "case_name": "Sort meeting notes",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "```\nSIGNAL:\n• Token structure asked 3x — economics is the real gatekeeper, not the thesis.\n• Protocol Labs intro offered — high-value network access independent of deal closure.\n• Similar tech different layer — potential competitor or integration target.\n\nNOISE:\n• 20 mins background talk — credibility signal, but no actionable data.\n• \"Good energy\" / \"Went well\" — subjective sentiment, not measurable outcome.\n\nWHAT IT MEANS:\nJean-Marc is prioritizing tokenomics over thesis alignment, making the Protocol Labs introduction the only guaranteed asset.\n```",
+          "latency": 29060,
+          "tokens": {
+            "prompt": 1188,
+            "completion": 2063
+          },
+          "cost_usd": 0.00344994
+        }
+      ]
+    }
+  ]
+}

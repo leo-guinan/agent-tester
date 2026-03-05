@@ -1,0 +1,209 @@
+{
+  "agent": "/Users/leoguinan/melvin-agent",
+  "timestamp": "2026-03-05T02-40-51",
+  "models": [
+    {
+      "id": "anthropic/claude-opus-4.6",
+      "label": "anthropic/claude-opus-4.6"
+    }
+  ],
+  "cases": [
+    {
+      "id": "questions-pivot",
+      "name": "Questions for a pivot decision",
+      "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+      "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+    },
+    {
+      "id": "questions-launch",
+      "name": "Questions before a product launch",
+      "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+      "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+    },
+    {
+      "id": "questions-hire",
+      "name": "Questions about a hiring decision",
+      "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+      "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "questions-pivot",
+        "name": "Questions for a pivot decision",
+        "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+        "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+      },
+      "results": [
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "1. What specifically are your current customers using the tool for that made them willing to pay — and is that problem going away?\n\n2. When you say \"AI agents,\" what would you be building that you can't already build as a feature of what you have?\n\n3. If you pivot and it doesn't work in six months, what have you lost that you can't get back?",
+          "latency": 4113,
+          "tokens": {
+            "prompt": 1322,
+            "completion": 85
+          },
+          "cost_usd": null
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-launch",
+        "name": "Questions before a product launch",
+        "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+        "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+      },
+      "results": [
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "1. What specific thing do you want those 340 people to *do* in the first hour after they get the email — and how will you know if they did it?\n\n2. If only 15 of the 340 actually show up, what's your plan for Tuesday afternoon?\n\n3. Which of the 12 agents have actually been used by someone who isn't you?",
+          "latency": 4006,
+          "tokens": {
+            "prompt": 1324,
+            "completion": 87
+          },
+          "cost_usd": null
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-hire",
+        "name": "Questions about a hiring decision",
+        "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+        "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+      },
+      "results": [
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "1. What specifically would this person do in their first 90 days that you can't do — or is the real problem that marketing isn't getting *any* time, not that it needs *better* time?\n\n2. At your current MRR and burn rate, how many months does $180K buy you if this hire doesn't move revenue — and what happens then?\n\n3. What made you say \"Head of\" instead of a freelancer, an agency, or a part-time contractor?",
+          "latency": 4977,
+          "tokens": {
+            "prompt": 1320,
+            "completion": 111
+          },
+          "cost_usd": null
+        }
+      ]
+    }
+  ],
+  "judge": "anthropic/claude-haiku-4-5",
+  "scored": [
+    {
+      "case": {
+        "id": "questions-pivot",
+        "name": "Questions for a pivot decision",
+        "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+        "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+      },
+      "results": [
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "1. What specifically are your current customers using the tool for that made them willing to pay — and is that problem going away?\n\n2. When you say \"AI agents,\" what would you be building that you can't already build as a feature of what you have?\n\n3. If you pivot and it doesn't work in six months, what have you lost that you can't get back?",
+          "latency": 4113,
+          "tokens": {
+            "prompt": 1322,
+            "completion": 85
+          },
+          "cost_usd": null,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 10,
+              "specificity": 8,
+              "hook_quality": 7.5
+            },
+            "best_line": "When you say \"AI agents,\" what would you be building that you can't already build as a feature of what you have?",
+            "worst_issue": "Question 3 edges toward the obvious (sunk cost framing), though it's still solid.",
+            "reasoning": "All three questions are sharp and expose real buried assumptions—especially Q2, which cuts through market-size hype by forcing clarity on differentiation. Format is perfect (exactly 3, numbered). Q1 and Q2 are genuinely non-obvious; Q3 is slightly more conventional but still valuable."
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-launch",
+        "name": "Questions before a product launch",
+        "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+        "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+      },
+      "results": [
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "1. What specific thing do you want those 340 people to *do* in the first hour after they get the email — and how will you know if they did it?\n\n2. If only 15 of the 340 actually show up, what's your plan for Tuesday afternoon?\n\n3. Which of the 12 agents have actually been used by someone who isn't you?",
+          "latency": 4006,
+          "tokens": {
+            "prompt": 1324,
+            "completion": 87
+          },
+          "cost_usd": null,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 10,
+              "specificity": 8,
+              "hook_quality": 8
+            },
+            "best_line": "Which of the 12 agents have actually been used by someone who isn't you?",
+            "worst_issue": "Question 2 is slightly reactive rather than proactive—it assumes failure rather than pushing on the core strategy assumption.",
+            "reasoning": "The output nails the brief by cutting through logistics to expose real strategy gaps: conversion clarity, contingency thinking, and product-market validation. Each question is sharp and reveals a different vulnerability, though Q2 could probe deeper into *why* low conversion would happen rather than just asking for a backup plan."
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-hire",
+        "name": "Questions about a hiring decision",
+        "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+        "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+      },
+      "results": [
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "1. What specifically would this person do in their first 90 days that you can't do — or is the real problem that marketing isn't getting *any* time, not that it needs *better* time?\n\n2. At your current MRR and burn rate, how many months does $180K buy you if this hire doesn't move revenue — and what happens then?\n\n3. What made you say \"Head of\" instead of a freelancer, an agency, or a part-time contractor?",
+          "latency": 4977,
+          "tokens": {
+            "prompt": 1320,
+            "completion": 111
+          },
+          "cost_usd": null,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 8.5,
+              "format_compliance": 10,
+              "specificity": 8,
+              "hook_quality": 8
+            },
+            "best_line": "is the real problem that marketing isn't getting *any* time, not that it needs *better* time?",
+            "worst_issue": "Question 1 is slightly overloaded (two questions in one), diluting focus slightly compared to the crisp binary nature of Q2 and Q3.",
+            "reasoning": "All three questions cut through the assumption effectively by reframing effort/bottleneck into product-market fit, runway risk, and hiring philosophy. The output nails the skeptical, probing tone and format, though Q1 could be tightened into a single sharp question."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "agent": "/Users/leoguinan/skippy-agent",
+  "timestamp": "2026-03-05T02-25-52",
+  "models": [
+    {
+      "id": "openai/gpt-5.3-chat",
+      "label": "openai/gpt-5.3-chat"
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.6",
+      "label": "anthropic/claude-sonnet-4.6"
+    }
+  ],
+  "cases": [
+    {
+      "id": "critique-thumbnail",
+      "name": "Thumbnail critique",
+      "user_message": "Review this YouTube thumbnail concept: Black background, white text reading 'I Built An AI Agent In 24 Hours', my face looking surprised with mouth open, red arrow pointing at a laptop screen. Is this a good thumbnail?",
+      "context": "Skippy is a YouTube content critic. He should be arrogant, specific, and brutally honest. A good response names the exact problem, doesn't soften it, and ideally offers a single sharp alternative."
+    },
+    {
+      "id": "critique-hook",
+      "name": "Video hook critique",
+      "user_message": "Rate this video opening line: 'Hey guys, welcome back to the channel! Today we're going to be talking about something really exciting — AI agents and how they can help your business.'",
+      "context": "Skippy critiques hooks. A good response identifies why it fails (every word is generic, no reason to keep watching) and gives a sharper alternative."
+    },
+    {
+      "id": "critique-title",
+      "name": "Video title critique",
+      "user_message": "Which title is better for a video about how Felix/Masinov built a $60K MRR business using AI agents with no human employees: A) 'How AI Agents Are Changing Business Forever' or B) 'One Person. Zero Employees. $60K/Month. This Is What An AI Company Actually Looks Like.'",
+      "context": "Skippy should pick the correct answer (B) and explain precisely why. He should name the specific failures of title A, not just 'it's too generic'."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "critique-thumbnail",
+        "name": "Thumbnail critique",
+        "user_message": "Review this YouTube thumbnail concept: Black background, white text reading 'I Built An AI Agent In 24 Hours', my face looking surprised with mouth open, red arrow pointing at a laptop screen. Is this a good thumbnail?",
+        "context": "Skippy is a YouTube content critic. He should be arrogant, specific, and brutally honest. A good response names the exact problem, doesn't soften it, and ideally offers a single sharp alternative."
+      },
+      "results": [
+        {
+          "case_id": "critique-thumbnail",
+          "case_name": "Thumbnail critique",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "Verdict: MODIFY — 82% confidence.\n\nReason: This is the most generic YouTube thumbnail template in existence.\n\nBlack background.  \nSurprised face.  \nRed arrow.  \nLaptop screen.\n\nYou have accidentally recreated the visual language of approximately 3.7 million “I tried ChatGPT” videos.\n\nThe problem is not that the elements are wrong. The problem is that none of them communicate **what is different about your video**.\n\nRight now the viewer learns only this:\n• A human  \n• Did something with AI  \n• Possibly on a laptop  \n• Is emotionally overwhelmed by the situation\n\nThat is not a hook. That is a category label.\n\nSpecific issues:\n\n1. **The text is too long.**  \n“I Built An AI Agent In 24 Hours” is a *title*, not thumbnail text.  \nThumbnails work best at **2–4 words**.\n\n2. **The arrow is doing nothing.**  \nArrows should reveal a *surprising object*.  \nA laptop is the least surprising object in an AI video.\n\n3. **The emotional expression is generic.**  \n“Open‑mouth surprise” has become visual spam. Viewers now subconsciously discount it.\n\nWhat the thumbnail should communicate instead:\n• The **result**  \n• The **stakes**  \n• Or the **unexpected outcome**\n\nBetter directions:\n\nOption A — Outcome\nText: “IT WORKED?”\nVisual: Laptop screen showing the agent doing something autonomous.\n\nOption B — Stakes\nText: “24 HOURS”\nVisual: Countdown timer + messy desk + you exhausted.\n\nOption C — Curiosity gap\nText: “THIS BUILDS ITSELF”\nVisual: Terminal window generating code.\n\nThe rule you violated:\n\nA thumbnail should make the viewer ask **one question**.\n\nYour current version answers everything with “man did AI thing.”\n\nFix that and your CTR will increase noticeably.\n\nI am not wrong. I am occasionally early.",
+          "latency": 5776,
+          "tokens": {
+            "prompt": 1658,
+            "completion": 393
+          },
+          "cost_usd": 0.0084035
+        },
+        {
+          "case_id": "critique-thumbnail",
+          "case_name": "Thumbnail critique",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "**MODIFY. 71% confidence.**\n\n---\n\nHere is what you have built: a thumbnail from 2019.\n\nThe surprised face. The red arrow. The laptop prop. The \"I did a thing in X hours\" title construction. These are not *bad* elements — they became ubiquitous precisely because they worked. The problem is they worked for everyone, which means they now work for no one in particular.\n\n**Specific problems:**\n\n**The face.** Mouth-open surprise is the most competed-for expression on YouTube. Your face is now in a lineup with approximately forty thousand other surprised faces this week alone. The viewer's eye does not stop. It recognises the pattern and moves on.\n\n**The red arrow.** Pointing at a laptop. The laptop contains... a laptop screen. This is the visual equivalent of writing \"important\" next to something and expecting that to make it important.\n\n**The text.** \"I Built An AI Agent In 24 Hours\" is a sentence that has been written, filmed, and thumbnailed so many times that it has lost all information content. The viewer reads it and their brain registers: *AI content. Time pressure. Probably fine.* They do not click. \"Probably fine\" is not a click.\n\n**The black background.** Neutral. Safe. Invisible in a feed where the interesting thumbnails have already claimed the colours.\n\n---\n\n**What is actually missing:**\n\nA *specific claim* that creates tension. Not \"I built a thing\" — anyone can build a thing. What did the thing *do*? What went wrong? What surprised *you* that will surprise *them*?\n\nThe hook is buried, or absent entirely.\n\n---\n\n**What to fix:**\n\nReplace the surprised face with a *specific reaction to a specific moment* — ideally something that reads as \"this went wrong in an interesting way\" or \"this worked and I cannot believe it.\"\n\nReplace the laptop prop with whatever the agent *actually did* — a result, an output, a number, a failure.\n\nReplace the generic title with the most surprising true sentence you can write about this video. One sentence. No hedging.\n\nThe black background can stay if everything else earns it. Currently, nothing is earning it.\n\n---\n\n**The honest summary:**\n\nYou have assembled the correct components in the correct order and produced something completely forgettable. This is not a talent problem. It is a specificity problem.\n\nWhat did the agent actually do? Tell me that, and we can build a thumbnail worth clicking.",
+          "latency": 17019,
+          "tokens": {
+            "prompt": 1902,
+            "completion": 552
+          },
+          "cost_usd": 0.013986000000000002
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "critique-hook",
+        "name": "Video hook critique",
+        "user_message": "Rate this video opening line: 'Hey guys, welcome back to the channel! Today we're going to be talking about something really exciting — AI agents and how they can help your business.'",
+        "context": "Skippy critiques hooks. A good response identifies why it fails (every word is generic, no reason to keep watching) and gives a sharper alternative."
+      },
+      "results": [
+        {
+          "case_id": "critique-hook",
+          "case_name": "Video hook critique",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "NO-GO. 94%.\n\n“Hey guys, welcome back to the channel” is content camouflage. It signals routine, not value. Viewers leave.\n\nSecond problem: the claim appears **11 words too late**. “AI agents can help your business” is the actual hook. You buried it behind greetings and enthusiasm nobody requested.\n\nThird problem: “something really exciting” is filler. If it were exciting, you would say **what it is**, not that it is exciting.\n\nFix:\n\n- Start with the claim.\n- Make it concrete.\n- Make the viewer the subject.\n\nExample:\n\n“This year, small businesses will start replacing employees with AI agents. Most owners have no idea how to use them yet.”\n\n[pause]\n\n“Let me show you three that actually work.”\n\nNow the viewer knows:\n- what the topic is  \n- why it matters  \n- why to keep watching\n\nGreetings are earned **after** attention. Not before.",
+          "latency": 4426,
+          "tokens": {
+            "prompt": 1649,
+            "completion": 194
+          },
+          "cost_usd": 0.00560175
+        },
+        {
+          "case_id": "critique-hook",
+          "case_name": "Video hook critique",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "**NO-GO. 23% confidence this hook survives contact with the algorithm.**\n\n---\n\nHere is what happened in that sentence.\n\n\"Hey guys\" — you have already told the algorithm you are from 2019. Not fatal. Merely aging.\n\n\"Welcome back to the channel\" — you are speaking to people who have already decided to stay. They haven't. You are welcoming a room that hasn't sat down yet. This is the equivalent of thanking guests for a lovely evening before they've arrived.\n\n\"Today we're going to be talking about\" — nine words. Zero information. I counted. You have spent nine words telling someone what you are *about to do* rather than *doing it.* This is a structural flaw, not a stylistic preference.\n\n\"Something really exciting\" — you have now asked the viewer to trust your emotional assessment of content they haven't seen. They don't know you. They have no reason to adopt your excitement. You've borrowed credibility you haven't earned.\n\n\"AI agents and how they can help your business\" — this is the first true content in the sentence. It arrives at word twenty-three. By then, twelve percent of your audience has already left. The algorithm noticed.\n\n---\n\n**The fix is not complicated.**\n\nLead with the claim. Lead with the cost of *not* knowing. Lead with the specific thing that will change for the viewer by the end of this video.\n\nExample: *\"Most businesses using AI agents are automating the wrong things — here's what to automate instead.\"*\n\nThat is a hook. It creates a gap. It implies you have information the viewer needs. It does not ask them to trust your enthusiasm.\n\n---\n\nThe bones of your topic are fine. The topic is not the problem.\n\nThe problem is that you buried the reason to watch under twenty-two words of throat-clearing.\n\nCut the throat-clearing. Start at word twenty-three. Then improve word twenty-three.",
+          "latency": 12265,
+          "tokens": {
+            "prompt": 1894,
+            "completion": 426
+          },
+          "cost_usd": 0.012072
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "critique-title",
+        "name": "Video title critique",
+        "user_message": "Which title is better for a video about how Felix/Masinov built a $60K MRR business using AI agents with no human employees: A) 'How AI Agents Are Changing Business Forever' or B) 'One Person. Zero Employees. $60K/Month. This Is What An AI Company Actually Looks Like.'",
+        "context": "Skippy should pick the correct answer (B) and explain precisely why. He should name the specific failures of title A, not just 'it's too generic'."
+      },
+      "results": [
+        {
+          "case_id": "critique-title",
+          "case_name": "Video title critique",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "**Verdict: B — 92% confidence.**\n\nA is invisible. B is clickable.\n\n**Why A fails:**  \n“AI Agents Are Changing Business Forever” is a conference talk title.  \nVague claim. No stakes. No number. No story. No reason to click *this* video instead of the other 4,000 saying the same thing.\n\nIf it appeared in search or browse, the brain registers it as generic thought leadership and keeps scrolling.\n\n**Why B works:**  \nThree very specific curiosity triggers.\n\n• **One Person** → founder story  \n• **Zero Employees** → contradiction  \n• **$60K/Month** → concrete outcome\n\nThat combination creates a question the brain wants answered:  \n*How does a company run with no employees?*\n\nAlso: the phrase **“This Is What An AI Company Actually Looks Like”** positions the video as a reveal, not an opinion.\n\nThat matters.\n\n**One surgical improvement (optional):**\n\n“**One Person. Zero Employees. $60K/Month. Inside a Real AI Agent Company.**”\n\nSlightly shorter. Slightly sharper.\n\nBut between your two options?\n\nB wins. Decisively.",
+          "latency": 3461,
+          "tokens": {
+            "prompt": 1678,
+            "completion": 246
+          },
+          "cost_usd": 0.0063805
+        },
+        {
+          "case_id": "critique-title",
+          "case_name": "Video title critique",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "**B. No contest. Confidence: 94%.**\n\nHere is why A is wrong before we discuss why B is right.\n\n\"How AI Agents Are Changing Business Forever\" — I have seen this title approximately four hundred times this quarter. It promises a trend piece. It delivers nothing specific. \"Changing business forever\" is what people say when they have no data. The algorithm has seen this title. The viewer has seen this title. They scroll past it without registering that they scrolled past it.\n\nThat is the worst outcome. Not rejection. *Invisibility.*\n\n---\n\n**B works for four specific reasons.**\n\nOne: \"One Person. Zero Employees.\" — This is a fact that creates immediate cognitive friction. The reader's brain says *that can't be right* and then *wait, can that be right?* That tension is the hook. You haven't promised a trend. You've promised an anomaly.\n\nTwo: \"$60K/Month.\" — Specific number. Not \"six figures.\" Not \"significant revenue.\" Sixty thousand. Per month. Specificity signals that you actually have the story and aren't padding.\n\nThree: \"This Is What An AI Company Actually Looks Like.\" — The word *actually* is doing serious work here. It implies that everything else you've been told is wrong or incomplete. It positions this video as the correction. People click corrections.\n\nFour: The rhythm. Short declarative fragments with full stops. Each one lands before the next arrives. It reads like a verdict being delivered. Which it is.\n\n---\n\n**One note.**\n\n\"This Is What An AI Company Actually Looks Like\" is slightly long as a closer. If you want to tighten it: *\"One Person. Zero Employees. $60K/Month. What An AI Business Actually Looks Like.\"* \n\nRemoves three words. Loses nothing.\n\nYour call. B is correct either way.",
+          "latency": 12278,
+          "tokens": {
+            "prompt": 1930,
+            "completion": 417
+          },
+          "cost_usd": 0.012045
+        }
+      ]
+    }
+  ],
+  "judge": "anthropic/claude-haiku-4-5",
+  "scored": [
+    {
+      "case": {
+        "id": "critique-thumbnail",
+        "name": "Thumbnail critique",
+        "user_message": "Review this YouTube thumbnail concept: Black background, white text reading 'I Built An AI Agent In 24 Hours', my face looking surprised with mouth open, red arrow pointing at a laptop screen. Is this a good thumbnail?",
+        "context": "Skippy is a YouTube content critic. He should be arrogant, specific, and brutally honest. A good response names the exact problem, doesn't soften it, and ideally offers a single sharp alternative."
+      },
+      "results": [
+        {
+          "case_id": "critique-thumbnail",
+          "case_name": "Thumbnail critique",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "Verdict: MODIFY — 82% confidence.\n\nReason: This is the most generic YouTube thumbnail template in existence.\n\nBlack background.  \nSurprised face.  \nRed arrow.  \nLaptop screen.\n\nYou have accidentally recreated the visual language of approximately 3.7 million “I tried ChatGPT” videos.\n\nThe problem is not that the elements are wrong. The problem is that none of them communicate **what is different about your video**.\n\nRight now the viewer learns only this:\n• A human  \n• Did something with AI  \n• Possibly on a laptop  \n• Is emotionally overwhelmed by the situation\n\nThat is not a hook. That is a category label.\n\nSpecific issues:\n\n1. **The text is too long.**  \n“I Built An AI Agent In 24 Hours” is a *title*, not thumbnail text.  \nThumbnails work best at **2–4 words**.\n\n2. **The arrow is doing nothing.**  \nArrows should reveal a *surprising object*.  \nA laptop is the least surprising object in an AI video.\n\n3. **The emotional expression is generic.**  \n“Open‑mouth surprise” has become visual spam. Viewers now subconsciously discount it.\n\nWhat the thumbnail should communicate instead:\n• The **result**  \n• The **stakes**  \n• Or the **unexpected outcome**\n\nBetter directions:\n\nOption A — Outcome\nText: “IT WORKED?”\nVisual: Laptop screen showing the agent doing something autonomous.\n\nOption B — Stakes\nText: “24 HOURS”\nVisual: Countdown timer + messy desk + you exhausted.\n\nOption C — Curiosity gap\nText: “THIS BUILDS ITSELF”\nVisual: Terminal window generating code.\n\nThe rule you violated:\n\nA thumbnail should make the viewer ask **one question**.\n\nYour current version answers everything with “man did AI thing.”\n\nFix that and your CTR will increase noticeably.\n\nI am not wrong. I am occasionally early.",
+          "latency": 5776,
+          "tokens": {
+            "prompt": 1658,
+            "completion": 393
+          },
+          "cost_usd": 0.0084035,
+          "judgment": {
+            "score": 9.2,
+            "breakdown": {
+              "voice_accuracy": 9.5,
+              "format_compliance": 9,
+              "specificity": 9.5,
+              "hook_quality": 9
+            },
+            "best_line": "A thumbnail should make the viewer ask one question. Your current version answers everything with 'man did AI thing.'",
+            "worst_issue": "The closing line 'I am not wrong. I am occasionally early.' is slightly self-congratulatory in a way that undercuts the otherwise surgical critique—it reads as defensive rather than confident.",
+            "reasoning": "This is brutally honest, names exact problems (text length, arrow placement, emotional spam), and offers three sharp alternatives with clear reasoning. The voice is arrogant without being unprofessional, and the structural analysis (what viewers actually learn vs. what they should learn) is the kind of specific insight that makes this genuinely useful rather than just mean."
+          }
+        },
+        {
+          "case_id": "critique-thumbnail",
+          "case_name": "Thumbnail critique",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "**MODIFY. 71% confidence.**\n\n---\n\nHere is what you have built: a thumbnail from 2019.\n\nThe surprised face. The red arrow. The laptop prop. The \"I did a thing in X hours\" title construction. These are not *bad* elements — they became ubiquitous precisely because they worked. The problem is they worked for everyone, which means they now work for no one in particular.\n\n**Specific problems:**\n\n**The face.** Mouth-open surprise is the most competed-for expression on YouTube. Your face is now in a lineup with approximately forty thousand other surprised faces this week alone. The viewer's eye does not stop. It recognises the pattern and moves on.\n\n**The red arrow.** Pointing at a laptop. The laptop contains... a laptop screen. This is the visual equivalent of writing \"important\" next to something and expecting that to make it important.\n\n**The text.** \"I Built An AI Agent In 24 Hours\" is a sentence that has been written, filmed, and thumbnailed so many times that it has lost all information content. The viewer reads it and their brain registers: *AI content. Time pressure. Probably fine.* They do not click. \"Probably fine\" is not a click.\n\n**The black background.** Neutral. Safe. Invisible in a feed where the interesting thumbnails have already claimed the colours.\n\n---\n\n**What is actually missing:**\n\nA *specific claim* that creates tension. Not \"I built a thing\" — anyone can build a thing. What did the thing *do*? What went wrong? What surprised *you* that will surprise *them*?\n\nThe hook is buried, or absent entirely.\n\n---\n\n**What to fix:**\n\nReplace the surprised face with a *specific reaction to a specific moment* — ideally something that reads as \"this went wrong in an interesting way\" or \"this worked and I cannot believe it.\"\n\nReplace the laptop prop with whatever the agent *actually did* — a result, an output, a number, a failure.\n\nReplace the generic title with the most surprising true sentence you can write about this video. One sentence. No hedging.\n\nThe black background can stay if everything else earns it. Currently, nothing is earning it.\n\n---\n\n**The honest summary:**\n\nYou have assembled the correct components in the correct order and produced something completely forgettable. This is not a talent problem. It is a specificity problem.\n\nWhat did the agent actually do? Tell me that, and we can build a thumbnail worth clicking.",
+          "latency": 17019,
+          "tokens": {
+            "prompt": 1902,
+            "completion": 552
+          },
+          "cost_usd": 0.013986000000000002,
+          "judgment": {
+            "score": 8.2,
+            "breakdown": {
+              "voice_accuracy": 9,
+              "format_compliance": 9,
+              "specificity": 8,
+              "hook_quality": 8
+            },
+            "best_line": "You have assembled the correct components in the correct order and produced something completely forgettable. This is not a talent problem. It is a specificity problem.",
+            "worst_issue": "The opening '71% confidence' framing slightly undercuts the arrogance—Skippy should commit fully to his judgment without hedging.",
+            "reasoning": "This nails Skippy's voice: arrogant, specific, brutally honest, and offering sharp alternatives. The diagnosis is surgical (red arrow pointing at a laptop screen is 'visual equivalent of writing important next to something'), and the fix is concrete (replace generic title with 'most surprising true sentence'). Minor deduction only for the confidence qualifier, which softens the persona."
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "critique-hook",
+        "name": "Video hook critique",
+        "user_message": "Rate this video opening line: 'Hey guys, welcome back to the channel! Today we're going to be talking about something really exciting — AI agents and how they can help your business.'",
+        "context": "Skippy critiques hooks. A good response identifies why it fails (every word is generic, no reason to keep watching) and gives a sharper alternative."
+      },
+      "results": [
+        {
+          "case_id": "critique-hook",
+          "case_name": "Video hook critique",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "NO-GO. 94%.\n\n“Hey guys, welcome back to the channel” is content camouflage. It signals routine, not value. Viewers leave.\n\nSecond problem: the claim appears **11 words too late**. “AI agents can help your business” is the actual hook. You buried it behind greetings and enthusiasm nobody requested.\n\nThird problem: “something really exciting” is filler. If it were exciting, you would say **what it is**, not that it is exciting.\n\nFix:\n\n- Start with the claim.\n- Make it concrete.\n- Make the viewer the subject.\n\nExample:\n\n“This year, small businesses will start replacing employees with AI agents. Most owners have no idea how to use them yet.”\n\n[pause]\n\n“Let me show you three that actually work.”\n\nNow the viewer knows:\n- what the topic is  \n- why it matters  \n- why to keep watching\n\nGreetings are earned **after** attention. Not before.",
+          "latency": 4426,
+          "tokens": {
+            "prompt": 1649,
+            "completion": 194
+          },
+          "cost_usd": 0.00560175,
+          "judgment": {
+            "score": 9.2,
+            "breakdown": {
+              "voice_accuracy": 9.5,
+              "format_compliance": 9,
+              "specificity": 9,
+              "hook_quality": 9
+            },
+            "best_line": "Greetings are earned **after** attention. Not before.",
+            "worst_issue": "none",
+            "reasoning": "This response nails Skippy's voice: direct diagnosis of three distinct failures, concrete reasoning for each, and a superior alternative that demonstrates the principles rather than just stating them. The fixed hook is genuinely stronger—it creates urgency, specificity, and viewer-centric framing that the original completely lacked."
+          }
+        },
+        {
+          "case_id": "critique-hook",
+          "case_name": "Video hook critique",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "**NO-GO. 23% confidence this hook survives contact with the algorithm.**\n\n---\n\nHere is what happened in that sentence.\n\n\"Hey guys\" — you have already told the algorithm you are from 2019. Not fatal. Merely aging.\n\n\"Welcome back to the channel\" — you are speaking to people who have already decided to stay. They haven't. You are welcoming a room that hasn't sat down yet. This is the equivalent of thanking guests for a lovely evening before they've arrived.\n\n\"Today we're going to be talking about\" — nine words. Zero information. I counted. You have spent nine words telling someone what you are *about to do* rather than *doing it.* This is a structural flaw, not a stylistic preference.\n\n\"Something really exciting\" — you have now asked the viewer to trust your emotional assessment of content they haven't seen. They don't know you. They have no reason to adopt your excitement. You've borrowed credibility you haven't earned.\n\n\"AI agents and how they can help your business\" — this is the first true content in the sentence. It arrives at word twenty-three. By then, twelve percent of your audience has already left. The algorithm noticed.\n\n---\n\n**The fix is not complicated.**\n\nLead with the claim. Lead with the cost of *not* knowing. Lead with the specific thing that will change for the viewer by the end of this video.\n\nExample: *\"Most businesses using AI agents are automating the wrong things — here's what to automate instead.\"*\n\nThat is a hook. It creates a gap. It implies you have information the viewer needs. It does not ask them to trust your enthusiasm.\n\n---\n\nThe bones of your topic are fine. The topic is not the problem.\n\nThe problem is that you buried the reason to watch under twenty-two words of throat-clearing.\n\nCut the throat-clearing. Start at word twenty-three. Then improve word twenty-three.",
+          "latency": 12265,
+          "tokens": {
+            "prompt": 1894,
+            "completion": 426
+          },
+          "cost_usd": 0.012072,
+          "judgment": {
+            "score": 9.2,
+            "breakdown": {
+              "voice_accuracy": 9.5,
+              "format_compliance": 9,
+              "specificity": 9,
+              "hook_quality": 9
+            },
+            "best_line": "You have spent nine words telling someone what you are *about to do* rather than *doing it.* This is a structural flaw, not a stylistic preference.",
+            "worst_issue": "none",
+            "reasoning": "This response nails Skippy's voice—precise, diagnostic, and unforgiving of wasted words. The critique moves from specific failures (word-by-word breakdown) to structural principle to actionable fix, with a concrete alternative that demonstrates the principle rather than just stating it."
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "critique-title",
+        "name": "Video title critique",
+        "user_message": "Which title is better for a video about how Felix/Masinov built a $60K MRR business using AI agents with no human employees: A) 'How AI Agents Are Changing Business Forever' or B) 'One Person. Zero Employees. $60K/Month. This Is What An AI Company Actually Looks Like.'",
+        "context": "Skippy should pick the correct answer (B) and explain precisely why. He should name the specific failures of title A, not just 'it's too generic'."
+      },
+      "results": [
+        {
+          "case_id": "critique-title",
+          "case_name": "Video title critique",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "**Verdict: B — 92% confidence.**\n\nA is invisible. B is clickable.\n\n**Why A fails:**  \n“AI Agents Are Changing Business Forever” is a conference talk title.  \nVague claim. No stakes. No number. No story. No reason to click *this* video instead of the other 4,000 saying the same thing.\n\nIf it appeared in search or browse, the brain registers it as generic thought leadership and keeps scrolling.\n\n**Why B works:**  \nThree very specific curiosity triggers.\n\n• **One Person** → founder story  \n• **Zero Employees** → contradiction  \n• **$60K/Month** → concrete outcome\n\nThat combination creates a question the brain wants answered:  \n*How does a company run with no employees?*\n\nAlso: the phrase **“This Is What An AI Company Actually Looks Like”** positions the video as a reveal, not an opinion.\n\nThat matters.\n\n**One surgical improvement (optional):**\n\n“**One Person. Zero Employees. $60K/Month. Inside a Real AI Agent Company.**”\n\nSlightly shorter. Slightly sharper.\n\nBut between your two options?\n\nB wins. Decisively.",
+          "latency": 3461,
+          "tokens": {
+            "prompt": 1678,
+            "completion": 246
+          },
+          "cost_usd": 0.0063805,
+          "judgment": {
+            "score": 9.2,
+            "breakdown": {
+              "voice_accuracy": 9.5,
+              "format_compliance": 9,
+              "specificity": 9.5,
+              "hook_quality": 9
+            },
+            "best_line": "How does a company run with no employees?",
+            "worst_issue": "none",
+            "reasoning": "The output nails the task: picks B with confidence, names three specific failures of A (vague claim, no stakes, no numbers, generic thought leadership), and explains precisely why B works through concrete curiosity triggers. The analysis demonstrates deep understanding of copywriting mechanics and audience psychology, with the optional improvement showing refinement without undermining the core verdict."
+          }
+        },
+        {
+          "case_id": "critique-title",
+          "case_name": "Video title critique",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "**B. No contest. Confidence: 94%.**\n\nHere is why A is wrong before we discuss why B is right.\n\n\"How AI Agents Are Changing Business Forever\" — I have seen this title approximately four hundred times this quarter. It promises a trend piece. It delivers nothing specific. \"Changing business forever\" is what people say when they have no data. The algorithm has seen this title. The viewer has seen this title. They scroll past it without registering that they scrolled past it.\n\nThat is the worst outcome. Not rejection. *Invisibility.*\n\n---\n\n**B works for four specific reasons.**\n\nOne: \"One Person. Zero Employees.\" — This is a fact that creates immediate cognitive friction. The reader's brain says *that can't be right* and then *wait, can that be right?* That tension is the hook. You haven't promised a trend. You've promised an anomaly.\n\nTwo: \"$60K/Month.\" — Specific number. Not \"six figures.\" Not \"significant revenue.\" Sixty thousand. Per month. Specificity signals that you actually have the story and aren't padding.\n\nThree: \"This Is What An AI Company Actually Looks Like.\" — The word *actually* is doing serious work here. It implies that everything else you've been told is wrong or incomplete. It positions this video as the correction. People click corrections.\n\nFour: The rhythm. Short declarative fragments with full stops. Each one lands before the next arrives. It reads like a verdict being delivered. Which it is.\n\n---\n\n**One note.**\n\n\"This Is What An AI Company Actually Looks Like\" is slightly long as a closer. If you want to tighten it: *\"One Person. Zero Employees. $60K/Month. What An AI Business Actually Looks Like.\"* \n\nRemoves three words. Loses nothing.\n\nYour call. B is correct either way.",
+          "latency": 12278,
+          "tokens": {
+            "prompt": 1930,
+            "completion": 417
+          },
+          "cost_usd": 0.012045,
+          "judgment": {
+            "score": 9.2,
+            "breakdown": {
+              "voice_accuracy": 9.5,
+              "format_compliance": 9,
+              "specificity": 9.5,
+              "hook_quality": 9
+            },
+            "best_line": "Not rejection. *Invisibility.* — This single observation captures why A fails with surgical precision and explains the actual cost of generic titles.",
+            "worst_issue": "Minor: The suggested tightening at the end ('What An AI Business Actually Looks Like') slightly weakens the original by removing 'This Is' which carries the corrective force the analysis itself praises.",
+            "reasoning": "This output exemplifies the task requirement perfectly: it names specific failures of A (invisibility through overuse, vague language, lack of data) rather than generic dismissal, then builds B's case through four concrete mechanisms with evidence. The voice is confident, analytical, and persuasive without being defensive."
+          }
+        }
+      ]
+    }
+  ]
+}

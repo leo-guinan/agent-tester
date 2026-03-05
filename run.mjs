@@ -73,11 +73,19 @@ if (modelsArg) {
 
 console.log(`Models: ${models.map(m => m.label).join(', ')}\n`);
 
+// Reasoning models need large token budgets — they burn tokens thinking before outputting
+function isReasoningModel(id) {
+  return id.includes('gpt-5-nano') || id.includes('o1') || id.includes('o3') ||
+    id.includes('r1') || id.includes('thinking');
+}
+
 // Pricing per token (from models.json pricing data)
 const PRICING = {
   'qwen/qwen3.5-27b':          { prompt: 0.000000195, completion: 0.00000156 },
   'anthropic/claude-haiku-4-5': { prompt: 0.000001,    completion: 0.000005   },
   'openai/gpt-5-nano':         { prompt: 0.00000005,  completion: 0.0000004  },
+  'openai/gpt-5.3-chat':           { prompt: 0.00000175,  completion: 0.000014  },
+  'anthropic/claude-sonnet-4.6':    { prompt: 0.000003,    completion: 0.000015  },
   // Free models
   'meta-llama/llama-3.2-3b-instruct:free':  { prompt: 0, completion: 0 },
   'meta-llama/llama-3.3-70b-instruct:free': { prompt: 0, completion: 0 },
@@ -116,7 +124,7 @@ async function callModel(model, userMessage) {
           { role: 'user', content: userMessage },
         ],
         temperature,
-        max_tokens: 800,  // Reasoning models need budget before they output
+        max_tokens: isReasoningModel(model.id) ? 8000 : 800,
       }),
     });
 
@@ -128,14 +136,8 @@ async function callModel(model, userMessage) {
     }
 
     const msg = data.choices?.[0]?.message || {};
-    // Reasoning models (o1/o3/gpt-5-nano) may return content=null with text in reasoning_details
-    // or in a separate output array — fall through to find text
+    // content is the actual response; reasoning_details is internal scratchpad (never use as output)
     let output = msg.content?.trim() || '';
-    if (!output && msg.reasoning_details) {
-      // Extract summary text if direct content is absent
-      const summary = msg.reasoning_details.find(d => d.type === 'reasoning.summary');
-      output = summary?.summary?.trim() || '';
-    }
     const usage = data.usage || {};
     const promptTok = usage.prompt_tokens || 0;
     const completionTok = usage.completion_tokens || 0;
@@ -200,3 +202,4 @@ const outFile = join(outputDir, `run-${timestamp}.json`);
 writeFileSync(outFile, JSON.stringify({ agent: agentPath, timestamp, models, cases, results: allResults }, null, 2));
 console.log(`\n✓ Results saved to: ${outFile}`);
 console.log(`\nNext: node judge.mjs --results ${outFile}`);
+// Pricing additions handled inline

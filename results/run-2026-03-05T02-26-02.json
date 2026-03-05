@@ -1,0 +1,144 @@
+{
+  "agent": "/Users/leoguinan/melvin-agent",
+  "timestamp": "2026-03-05T02-26-02",
+  "models": [
+    {
+      "id": "openai/gpt-5.3-chat",
+      "label": "openai/gpt-5.3-chat"
+    },
+    {
+      "id": "anthropic/claude-sonnet-4.6",
+      "label": "anthropic/claude-sonnet-4.6"
+    }
+  ],
+  "cases": [
+    {
+      "id": "questions-pivot",
+      "name": "Questions for a pivot decision",
+      "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+      "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+    },
+    {
+      "id": "questions-launch",
+      "name": "Questions before a product launch",
+      "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+      "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+    },
+    {
+      "id": "questions-hire",
+      "name": "Questions about a hiring decision",
+      "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+      "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "questions-pivot",
+        "name": "Questions for a pivot decision",
+        "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+        "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+      },
+      "results": [
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "1. Who are the specific people paying the $1,200 MRR right now, and what exact problem made them decide it was worth money?\n\n2. What evidence do you have that those same people — or any clearly defined people — would pay you for an AI agent instead of what you’re building today?\n\n3. If the AI agent market disappeared tomorrow, what problem would you still feel compelled to solve?",
+          "latency": 3302,
+          "tokens": {
+            "prompt": 1167,
+            "completion": 170
+          },
+          "cost_usd": 0.00442225
+        },
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "1. What specifically about your current customers' behavior tells you the problem you're solving isn't big enough — or is the $1,200 MRR the only signal?\n\n2. Who asked you to build AI agents, and what did they say they'd pay?\n\n3. What would you have to throw away?",
+          "latency": 3366,
+          "tokens": {
+            "prompt": 1322,
+            "completion": 72
+          },
+          "cost_usd": 0.005046
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-launch",
+        "name": "Questions before a product launch",
+        "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+        "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+      },
+      "results": [
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "1. Of the 340 people on your waitlist, how many have you actually talked to — and do you know which of the 12 agents they signed up *for*?\n\n2. What happens when someone from the waitlist tries an agent and it doesn't work the way they expected?\n\n3. Why Tuesday?",
+          "latency": 2149,
+          "tokens": {
+            "prompt": 1324,
+            "completion": 73
+          },
+          "cost_usd": 0.005067
+        },
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "1. What will the first person who arrives actually do in the first 60 seconds?\n\n2. Who is the one specific person on that waitlist you most want to show up, and what do they need to see to stay?\n\n3. If all 340 people visit and none of them use an agent, what would that tell you the real problem is?",
+          "latency": 3159,
+          "tokens": {
+            "prompt": 1171,
+            "completion": 229
+          },
+          "cost_usd": 0.0052552499999999995
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-hire",
+        "name": "Questions about a hiring decision",
+        "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+        "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+      },
+      "results": [
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "openai/gpt-5.3-chat",
+          "label": "openai/gpt-5.3-chat",
+          "output": "1. What specific marketing work is not happening right now because only you can do it?\n\n2. What result would a Head of Marketing need to produce in the first 90 days for the $180K in the bank to feel safer, not riskier?\n\n3. If growth doesn’t change after you hire them, what will you conclude the real bottleneck actually was?",
+          "latency": 2964,
+          "tokens": {
+            "prompt": 1166,
+            "completion": 236
+          },
+          "cost_usd": 0.0053445
+        },
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "anthropic/claude-sonnet-4.6",
+          "label": "anthropic/claude-sonnet-4.6",
+          "output": "1. What specifically have you tried in marketing that didn't scale — and what did you stop doing because you ran out of time, not because it stopped working?\n\n2. When you imagine not being the bottleneck anymore, what does the Head of Marketing actually do on their first ninety days?\n\n3. At $8K MRR, can you name the three customers who joined most recently and explain exactly why each of them chose you?",
+          "latency": 3580,
+          "tokens": {
+            "prompt": 1320,
+            "completion": 97
+          },
+          "cost_usd": 0.005415
+        }
+      ]
+    }
+  ]
+}

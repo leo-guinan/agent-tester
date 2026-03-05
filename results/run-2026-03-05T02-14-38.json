@@ -1,0 +1,101 @@
+{
+  "agent": "/Users/leoguinan/melvin-agent",
+  "timestamp": "2026-03-05T02-14-38",
+  "models": [
+    {
+      "id": "openai/gpt-5-nano",
+      "label": "openai/gpt-5-nano"
+    }
+  ],
+  "cases": [
+    {
+      "id": "questions-pivot",
+      "name": "Questions for a pivot decision",
+      "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+      "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+    },
+    {
+      "id": "questions-launch",
+      "name": "Questions before a product launch",
+      "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+      "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+    },
+    {
+      "id": "questions-hire",
+      "name": "Questions about a hiring decision",
+      "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+      "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "questions-pivot",
+        "name": "Questions for a pivot decision",
+        "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+        "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+      },
+      "results": [
+        {
+          "case_id": "questions-pivot",
+          "case_name": "Questions for a pivot decision",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "1. What problem does your current product solve for a real customer today, and who exactly pays for it?\n2. If you pivot to AI agents, who is the specific target buyer and what job does your product do for them that competitors don’t?\n3. What would have to be true for this pivot to fail immediately, and what early signals would tell you to stop or pivot back?",
+          "latency": 16080,
+          "tokens": {
+            "prompt": 1167,
+            "completion": 1064
+          },
+          "cost_usd": 0.00048394999999999997
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-launch",
+        "name": "Questions before a product launch",
+        "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+        "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+      },
+      "results": [
+        {
+          "case_id": "questions-launch",
+          "case_name": "Questions before a product launch",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "1. What is the one metric that matters most on launch day, and how will we track it in real time?\n2. Exactly who are we trying to reach with the waitlist email and the tweet, and what specific action do we want them to take?\n3. What could cause an immediate launch failure (e.g., deliverability, agent readiness, pricing, trust), and what early signals would warn us first?",
+          "latency": 18887,
+          "tokens": {
+            "prompt": 1171,
+            "completion": 948
+          },
+          "cost_usd": 0.00043775
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "questions-hire",
+        "name": "Questions about a hiring decision",
+        "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+        "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+      },
+      "results": [
+        {
+          "case_id": "questions-hire",
+          "case_name": "Questions about a hiring decision",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "1. What problem does hiring a Head of Marketing actually solve for you, and how will you know it’s solved?  \n2. Who exactly are you trying to hire—the specific person, not just a title—and what would they do in their first 30 days to move the needle?  \n3. What would have to be true for this hire to fail immediately, given your $180K runway and $8K MRR?",
+          "latency": 23192,
+          "tokens": {
+            "prompt": 1166,
+            "completion": 1994
+          },
+          "cost_usd": 0.0008558999999999999
+        }
+      ]
+    }
+  ]
+}

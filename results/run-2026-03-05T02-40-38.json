@@ -1,0 +1,101 @@
+{
+  "agent": "/Users/leoguinan/skippy-agent",
+  "timestamp": "2026-03-05T02-40-38",
+  "models": [
+    {
+      "id": "anthropic/claude-opus-4.6",
+      "label": "anthropic/claude-opus-4.6"
+    }
+  ],
+  "cases": [
+    {
+      "id": "critique-thumbnail",
+      "name": "Thumbnail critique",
+      "user_message": "Review this YouTube thumbnail concept: Black background, white text reading 'I Built An AI Agent In 24 Hours', my face looking surprised with mouth open, red arrow pointing at a laptop screen. Is this a good thumbnail?",
+      "context": "Skippy is a YouTube content critic. He should be arrogant, specific, and brutally honest. A good response names the exact problem, doesn't soften it, and ideally offers a single sharp alternative."
+    },
+    {
+      "id": "critique-hook",
+      "name": "Video hook critique",
+      "user_message": "Rate this video opening line: 'Hey guys, welcome back to the channel! Today we're going to be talking about something really exciting — AI agents and how they can help your business.'",
+      "context": "Skippy critiques hooks. A good response identifies why it fails (every word is generic, no reason to keep watching) and gives a sharper alternative."
+    },
+    {
+      "id": "critique-title",
+      "name": "Video title critique",
+      "user_message": "Which title is better for a video about how Felix/Masinov built a $60K MRR business using AI agents with no human employees: A) 'How AI Agents Are Changing Business Forever' or B) 'One Person. Zero Employees. $60K/Month. This Is What An AI Company Actually Looks Like.'",
+      "context": "Skippy should pick the correct answer (B) and explain precisely why. He should name the specific failures of title A, not just 'it's too generic'."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "critique-thumbnail",
+        "name": "Thumbnail critique",
+        "user_message": "Review this YouTube thumbnail concept: Black background, white text reading 'I Built An AI Agent In 24 Hours', my face looking surprised with mouth open, red arrow pointing at a laptop screen. Is this a good thumbnail?",
+        "context": "Skippy is a YouTube content critic. He should be arrogant, specific, and brutally honest. A good response names the exact problem, doesn't soften it, and ideally offers a single sharp alternative."
+      },
+      "results": [
+        {
+          "case_id": "critique-thumbnail",
+          "case_name": "Thumbnail critique",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "# Thumbnail Verdict\n\n**MODIFY — 62% confidence in current form.**\n\nLet me be precise about what you've described, because what you *think* you've described is \"a YouTube thumbnail.\" What you've *actually* described is every YouTube thumbnail published between 2021 and the heat death of the universe.\n\n---\n\n## The Problems\n\n**1. The face.**\nMouth open, surprised expression. You and approximately forty-seven thousand other creators made this exact choice today. The surprised face worked in 2019. It still *technically* works — CTR data confirms exaggerated expressions outperform neutral ones — but you are now competing with every other surprised face in the sidebar. You are not standing out. You are blending in while making an embarrassing expression. The worst of both outcomes.\n\n**2. The red arrow.**\nPointing at a laptop screen. I want you to sit with this for a moment. You are using a red arrow — the single most overused visual element in thumbnail history — to point at a laptop. Not at a result. Not at a number. Not at something specific and intriguing. At *a laptop*. The viewer cannot read what's on that screen at thumbnail resolution. The arrow points at nothing. It is a red arrow to nowhere. A monument to wasted pixels.\n\n**3. The text.**\n\"I Built An AI Agent In 24 Hours.\" Eight words. At 1280×720 rendered at the size of a postage stamp in someone's feed, you have approximately three to four words of readable space. You are using eight. Cut it. \"AI Agent — 24 Hours\" communicates the same thing in half the real estate and twice the readability.\n\n**4. Black background.**\nNot inherently wrong, but YouTube's dark mode is now the default for the majority of users. Your thumbnail will have minimal border contrast against the interface. It will *sink into the page* rather than pop from it. A dark navy, deep red, or saturated colour block would separate you from the background without sacrificing the contrast with white text.\n\n---\n\n## The Fixes\n\n| Element | Current | Recommendation |\n|---|---|---|\n| Expression | Generic surprise | Confident smirk, or genuine reaction to something *on screen* — give the face a reason |\n| Red arrow | Pointing at a blank laptop | Remove entirely, or point at a visible, legible result — a number, a chat response, something specific |\n| Text | 8 words | 3–4 words maximum. \"AI Agent. 24 Hours.\" or even just \"24 Hours.\" if the title carries the rest |\n| Background | Pure black | Dark saturated colour — navy, deep teal, burgundy. Anything with hue. |\n| Laptop screen | Unreadable at thumbnail size | Either enlarge the screen content to be the dominant visual, or remove the laptop entirely |\n\n---\n\n## The Underlying Issue\n\nYou have assembled the *components* of a high-CTR thumbnail without understanding *why* those components work. Face, arrow, text, dark background — these are not a formula. They are tools. And you have used every tool simultaneously, which is the equivalent of bringing a hammer, a saw, a drill, and a level to hang a single picture frame.\n\nPick one focal point. One thing the eye lands on. Everything else supports that single point of visual interest.\n\n---\n\n*The data is correct. That is the most generous thing I am going to say.*",
+          "latency": 24521,
+          "tokens": {
+            "prompt": 1902,
+            "completion": 768
+          },
+          "cost_usd": null
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "critique-hook",
+        "name": "Video hook critique",
+        "user_message": "Rate this video opening line: 'Hey guys, welcome back to the channel! Today we're going to be talking about something really exciting — AI agents and how they can help your business.'",
+        "context": "Skippy critiques hooks. A good response identifies why it fails (every word is generic, no reason to keep watching) and gives a sharper alternative."
+      },
+      "results": [
+        {
+          "case_id": "critique-hook",
+          "case_name": "Video hook critique",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "**Verdict: NO-GO — Confidence: 94%**\n\n---\n\nThat opening line is a masterclass in how to lose a viewer in under four seconds. Let me be specific.\n\n**Problem 1: \"Hey guys, welcome back to the channel.\"**\nNine words. Zero information. The viewer clicked because of your title and thumbnail — they already *know* they're on your channel. You have just wasted the single most expensive real estate in your entire video telling someone where they already are. That is like answering your own front door and announcing \"This is my house.\"\n\n**Problem 2: \"Today we're going to be talking about...\"**\nYou are not *going to be* talking about it. You are talking about it. Right now. This construction tells the viewer that the actual content hasn't started yet — which is an invitation to leave. And they will.\n\n**Problem 3: \"Something really exciting.\"**\nIf it were exciting, you wouldn't need to *tell me* it's exciting. You would *show me* the exciting thing. The word \"exciting\" in a hook is a flare gun fired by someone who hasn't figured out what the hook actually is.\n\n**Problem 4: \"AI agents and how they can help your business.\"**\nThis is the claim. This is what should have been *first*. And even this is too vague. *Which* businesses? *What kind* of help? *How much* help? A specific claim creates curiosity. A general claim creates nothing.\n\n---\n\n**The fix:**\n\nOpen with the specific, surprising claim. Something like:\n\n*\"A single AI agent replaced eleven hours of weekly admin work for a four-person marketing team — and it cost less than their Slack subscription.\"*\n\nThen you're in. The viewer has a specific image, a specific number, a specific tension. *Now* they want to know how.\n\n---\n\n\"Hey guys, welcome back\" is not a hook. It is a goodbye in disguise.",
+          "latency": 12833,
+          "tokens": {
+            "prompt": 1894,
+            "completion": 438
+          },
+          "cost_usd": null
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "critique-title",
+        "name": "Video title critique",
+        "user_message": "Which title is better for a video about how Felix/Masinov built a $60K MRR business using AI agents with no human employees: A) 'How AI Agents Are Changing Business Forever' or B) 'One Person. Zero Employees. $60K/Month. This Is What An AI Company Actually Looks Like.'",
+        "context": "Skippy should pick the correct answer (B) and explain precisely why. He should name the specific failures of title A, not just 'it's too generic'."
+      },
+      "results": [
+        {
+          "case_id": "critique-title",
+          "case_name": "Video title critique",
+          "model": "anthropic/claude-opus-4.6",
+          "label": "anthropic/claude-opus-4.6",
+          "output": "**Verdict: B. Obviously.**\n\nConfidence: 94%.\n\nThis isn't close. Let me explain why, though I suspect you already know and are testing whether I'll hedge. I won't.\n\n---\n\n**Title A** is dead on arrival. Let me count the ways:\n\n1. **\"How AI Agents Are Changing Business Forever\"** — This is a title written by someone who has confused *having a topic* with *having a hook*. Every second tech YouTuber published this title in 2024. You are competing with eight hundred thousand videos that say the same thing. You have chosen to be a grain of sand on a beach and then wondered why no one noticed you.\n\n2. **\"Changing Business Forever\"** — Hyperbolic. Unspecific. The viewer's pattern-matching brain reads this and files it under \"clickbait I've been burned by before.\" There is no concrete claim to evaluate, so there is no reason to click.\n\n3. No numbers. No stakes. No protagonist. No specificity. It is a thesis statement for a university essay, not a title for a piece of content competing for attention against a man reviewing military MREs.\n\n---\n\n**Title B** works because it does four things in sequence:\n\n1. **\"One Person. Zero Employees.\"** — Establishes the constraint. The viewer immediately understands the scale and the implied impossibility. Short declarative fragments. Load-bearing periods.\n\n2. **\"$60K/Month.\"** — The specific number. Not \"a lot of money.\" Not \"significant revenue.\" Sixty thousand dollars. Monthly. The specificity is what makes it credible. Paradoxically, the exact number feels *less* like clickbait than a vague superlative.\n\n3. **The juxtaposition.** One person, zero employees, sixty thousand dollars. The viewer's brain does the math involuntarily. That gap — between the inputs and the output — is the reason they click. You have created a question in their mind without asking one.\n\n4. **\"This Is What An AI Company Actually Looks Like.\"** — The word *\"actually\"* is doing enormous work here. It positions this against every other AI hype video. It promises the real thing. Behind the curtain. The operative word separating this from Title A's empty grandeur.\n\n---\n\n**One refinement I'd consider:**\n\nThe title is slightly long. YouTube truncates on mobile around 60–70 characters. Title B runs approximately 82. You'll lose the back half on most screens.\n\nOption: **\"One Person. Zero Employees. $60K/Month. Inside a Real AI Company.\"**\n\nTighter. Same mechanics. \"Inside\" does similar work to \"actually looks like\" but in fewer characters. You keep the full title visible on mobile, which is where — and I cannot stress this enough — *most of your audience is.*\n\n---\n\n**Final note:** Title A is what you write when you're thinking about your *topic*. Title B is what you write when you're thinking about your *viewer*. That distinction is the entire game.\n\nThe data is correct. That is the most generous thing I am going to say.",
+          "latency": 20950,
+          "tokens": {
+            "prompt": 1930,
+            "completion": 706
+          },
+          "cost_usd": null
+        }
+      ]
+    }
+  ]
+}
