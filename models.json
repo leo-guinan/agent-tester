@@ -2,12 +2,13 @@
   "groups": {
     "free": [
       { "id": "meta-llama/llama-3.2-3b-instruct:free", "label": "Llama 3.2 3B (free)" },
-      { "id": "meta-llama/llama-3.1-8b-instruct:free", "label": "Llama 3.1 8B (free)" },
       { "id": "meta-llama/llama-3.3-70b-instruct:free", "label": "Llama 3.3 70B (free)" },
-      { "id": "mistralai/mistral-7b-instruct:free", "label": "Mistral 7B (free)" },
+      { "id": "mistralai/mistral-small-3.1-24b-instruct:free", "label": "Mistral Small 3.1 24B (free)" },
       { "id": "google/gemma-3-12b-it:free", "label": "Gemma 3 12B (free)" },
-      { "id": "deepseek/deepseek-r1-zero:free", "label": "DeepSeek R1 Zero (free)" },
-      { "id": "qwen/qwen-2.5-72b-instruct:free", "label": "Qwen 2.5 72B (free)" }
+      { "id": "google/gemma-3-27b-it:free", "label": "Gemma 3 27B (free)" },
+      { "id": "deepseek/deepseek-chat-v3-0324:free", "label": "DeepSeek V3 (free)" },
+      { "id": "qwen/qwen3-8b:free", "label": "Qwen3 8B (free)" },
+      { "id": "qwen/qwen3-30b-a3b:free", "label": "Qwen3 30B MoE (free)" }
     ],
     "openai": [
       { "id": "openai/gpt-4.1-nano", "label": "GPT-4.1 Nano" },

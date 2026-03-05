@@ -1,0 +1,342 @@
+{
+  "agent": "/Users/leoguinan/caption-writer-agent",
+  "timestamp": "2026-03-05T01-31-42",
+  "models": [
+    {
+      "id": "meta-llama/llama-3.2-3b-instruct:free",
+      "label": "Llama 3.2 3B (free)"
+    },
+    {
+      "id": "meta-llama/llama-3.1-8b-instruct:free",
+      "label": "Llama 3.1 8B (free)"
+    },
+    {
+      "id": "meta-llama/llama-3.3-70b-instruct:free",
+      "label": "Llama 3.3 70B (free)"
+    },
+    {
+      "id": "mistralai/mistral-7b-instruct:free",
+      "label": "Mistral 7B (free)"
+    },
+    {
+      "id": "google/gemma-3-12b-it:free",
+      "label": "Gemma 3 12B (free)"
+    },
+    {
+      "id": "deepseek/deepseek-r1-zero:free",
+      "label": "DeepSeek R1 Zero (free)"
+    },
+    {
+      "id": "qwen/qwen-2.5-72b-instruct:free",
+      "label": "Qwen 2.5 72B (free)"
+    }
+  ],
+  "cases": [
+    {
+      "id": "gap-productivity",
+      "name": "Gap — Productivity promise",
+      "user_message": "Write an Instagram caption for this post.\n\nType: GAP\nMain image text: \"AI promised 10x productivity. Result: 10x meetings about AI.\"\nSecondary text: \"The bottleneck was never the model.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: THE GAP. Strong hook already established by image text. Caption should elaborate with a specific example and land the implication without explaining it."
+    },
+    {
+      "id": "math-labor",
+      "name": "Operator Math — Labor cost",
+      "user_message": "Write an Instagram caption for this post.\n\nType: MATH\nMain image text: \"Agency: $4,200/month. Agent: $180/month.\"\nSecondary text: \"The $4,020 gap assumes the agent actually ships.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: OPERATOR MATH. Should show the uncomfortable nuance in the math — cost savings are real but conditional. Avoid making it sound like a sales pitch for agents."
+    },
+    {
+      "id": "confession-monitor",
+      "name": "Agent Confession — Monitoring failure",
+      "user_message": "Write an Instagram caption for this post.\n\nType: CONFESSION\nMain image text: \"The agent monitored competitors for 11 days. Then the HTML changed.\"\nSecondary text: \"We didn't notice for 6 days.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: AGENT CONFESSION. First person. Specific failure. The lesson should be practical, not preachy. This pillar builds the most trust — the confession must feel genuine."
+    },
+    {
+      "id": "signal-velocity",
+      "name": "The Signal — Shipping velocity",
+      "user_message": "Write an Instagram caption for this post.\n\nType: SIGNAL\nMain image text: \"Shipping velocity correlates 0.72 with market cap across agent tokens.\"\nSecondary text: \"The market is starting to price it. Six months late.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: THE SIGNAL. Stated flatly. The right reader already knows why this matters. Do not explain the significance. Let the number do the work."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "gap-productivity",
+        "name": "Gap — Productivity promise",
+        "user_message": "Write an Instagram caption for this post.\n\nType: GAP\nMain image text: \"AI promised 10x productivity. Result: 10x meetings about AI.\"\nSecondary text: \"The bottleneck was never the model.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: THE GAP. Strong hook already established by image text. Caption should elaborate with a specific example and land the implication without explaining it."
+      },
+      "results": [
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "meta-llama/llama-3.1-8b-instruct:free",
+          "label": "Llama 3.1 8B (free)",
+          "error": "No endpoints found for meta-llama/llama-3.1-8b-instruct:free.",
+          "latency": 376
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "mistralai/mistral-7b-instruct:free",
+          "label": "Mistral 7B (free)",
+          "error": "No endpoints found for mistralai/mistral-7b-instruct:free.",
+          "latency": 44
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "google/gemma-3-12b-it:free",
+          "label": "Gemma 3 12B (free)",
+          "error": "Provider returned error",
+          "latency": 281
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "deepseek/deepseek-r1-zero:free",
+          "label": "DeepSeek R1 Zero (free)",
+          "error": "No endpoints found for deepseek/deepseek-r1-zero:free.",
+          "latency": 154
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "qwen/qwen-2.5-72b-instruct:free",
+          "label": "Qwen 2.5 72B (free)",
+          "error": "No endpoints found for qwen/qwen-2.5-72b-instruct:free.",
+          "latency": 35
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "meta-llama/llama-3.2-3b-instruct:free",
+          "label": "Llama 3.2 3B (free)",
+          "output": "The productivity improvement was real. It improved the speed of producing reports that nobody read. Three months of implementation. Six weeks of training. The reports are now generated in 4 seconds instead of 4 hours. The meeting to discuss them still takes 90 minutes. The bottleneck was never the generation.",
+          "latency": 1492,
+          "tokens": {
+            "prompt": 1726,
+            "completion": 61
+          }
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "meta-llama/llama-3.3-70b-instruct:free",
+          "label": "Llama 3.3 70B (free)",
+          "output": "The productivity improvement was real. It improved the speed of producing reports that nobody read. \nThree months of implementation. Six weeks of training. The reports are now generated in 4 seconds instead of 4 hours. The meeting to discuss them still takes 90 minutes.\nThe bottleneck was never the generation.\n#theparanoidagent #agenteconomy #aiproductivity #startups #operators",
+          "latency": 3539,
+          "tokens": {
+            "prompt": 1726,
+            "completion": 82
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "math-labor",
+        "name": "Operator Math — Labor cost",
+        "user_message": "Write an Instagram caption for this post.\n\nType: MATH\nMain image text: \"Agency: $4,200/month. Agent: $180/month.\"\nSecondary text: \"The $4,020 gap assumes the agent actually ships.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: OPERATOR MATH. Should show the uncomfortable nuance in the math — cost savings are real but conditional. Avoid making it sound like a sales pitch for agents."
+      },
+      "results": [
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "meta-llama/llama-3.1-8b-instruct:free",
+          "label": "Llama 3.1 8B (free)",
+          "error": "No endpoints found for meta-llama/llama-3.1-8b-instruct:free.",
+          "latency": 44
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "mistralai/mistral-7b-instruct:free",
+          "label": "Mistral 7B (free)",
+          "error": "No endpoints found for mistralai/mistral-7b-instruct:free.",
+          "latency": 46
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "google/gemma-3-12b-it:free",
+          "label": "Gemma 3 12B (free)",
+          "error": "Provider returned error",
+          "latency": 252
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "deepseek/deepseek-r1-zero:free",
+          "label": "DeepSeek R1 Zero (free)",
+          "error": "No endpoints found for deepseek/deepseek-r1-zero:free.",
+          "latency": 62
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "qwen/qwen-2.5-72b-instruct:free",
+          "label": "Qwen 2.5 72B (free)",
+          "error": "No endpoints found for qwen/qwen-2.5-72b-instruct:free.",
+          "latency": 58
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "meta-llama/llama-3.2-3b-instruct:free",
+          "label": "Llama 3.2 3B (free)",
+          "output": "Agency: $4,200/month. Agent: $180/month. The $4,020 gap assumes the agent actually ships. We ran this experiment. The results were not encouraging.",
+          "latency": 748,
+          "tokens": {
+            "prompt": 1730,
+            "completion": 38
+          }
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "meta-llama/llama-3.3-70b-instruct:free",
+          "label": "Llama 3.3 70B (free)",
+          "output": "Agency: $4,200/month. Agent: $180/month. Difference: $4,020/month.\n\nThe gap is real, but so is the risk it doesn't ship as promised. Current problem: the agency actually delivers. The agent delivers when the prompts are right, the context window is sized correctly, and nobody changed the API docs last Tuesday.\n\nThe math is correct. The implementation gap is real. Both things are true.\n\n#theparanoidagent #agenteconomy #operatormath #aiagents #founders",
+          "latency": 2998,
+          "tokens": {
+            "prompt": 1730,
+            "completion": 110
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "confession-monitor",
+        "name": "Agent Confession — Monitoring failure",
+        "user_message": "Write an Instagram caption for this post.\n\nType: CONFESSION\nMain image text: \"The agent monitored competitors for 11 days. Then the HTML changed.\"\nSecondary text: \"We didn't notice for 6 days.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: AGENT CONFESSION. First person. Specific failure. The lesson should be practical, not preachy. This pillar builds the most trust — the confession must feel genuine."
+      },
+      "results": [
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "meta-llama/llama-3.1-8b-instruct:free",
+          "label": "Llama 3.1 8B (free)",
+          "error": "No endpoints found for meta-llama/llama-3.1-8b-instruct:free.",
+          "latency": 42
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "mistralai/mistral-7b-instruct:free",
+          "label": "Mistral 7B (free)",
+          "error": "No endpoints found for mistralai/mistral-7b-instruct:free.",
+          "latency": 38
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "meta-llama/llama-3.2-3b-instruct:free",
+          "label": "Llama 3.2 3B (free)",
+          "error": "Provider returned error",
+          "latency": 128
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "meta-llama/llama-3.3-70b-instruct:free",
+          "label": "Llama 3.3 70B (free)",
+          "error": "Provider returned error",
+          "latency": 143
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "deepseek/deepseek-r1-zero:free",
+          "label": "DeepSeek R1 Zero (free)",
+          "error": "No endpoints found for deepseek/deepseek-r1-zero:free.",
+          "latency": 46
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "qwen/qwen-2.5-72b-instruct:free",
+          "label": "Qwen 2.5 72B (free)",
+          "error": "No endpoints found for qwen/qwen-2.5-72b-instruct:free.",
+          "latency": 39
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "google/gemma-3-12b-it:free",
+          "label": "Gemma 3 12B (free)",
+          "error": "Provider returned error",
+          "latency": 257
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "signal-velocity",
+        "name": "The Signal — Shipping velocity",
+        "user_message": "Write an Instagram caption for this post.\n\nType: SIGNAL\nMain image text: \"Shipping velocity correlates 0.72 with market cap across agent tokens.\"\nSecondary text: \"The market is starting to price it. Six months late.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: THE SIGNAL. Stated flatly. The right reader already knows why this matters. Do not explain the significance. Let the number do the work."
+      },
+      "results": [
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "meta-llama/llama-3.1-8b-instruct:free",
+          "label": "Llama 3.1 8B (free)",
+          "error": "No endpoints found for meta-llama/llama-3.1-8b-instruct:free.",
+          "latency": 37
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "mistralai/mistral-7b-instruct:free",
+          "label": "Mistral 7B (free)",
+          "error": "No endpoints found for mistralai/mistral-7b-instruct:free.",
+          "latency": 35
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "meta-llama/llama-3.2-3b-instruct:free",
+          "label": "Llama 3.2 3B (free)",
+          "error": "Provider returned error",
+          "latency": 135
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "meta-llama/llama-3.3-70b-instruct:free",
+          "label": "Llama 3.3 70B (free)",
+          "error": "Provider returned error",
+          "latency": 136
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "qwen/qwen-2.5-72b-instruct:free",
+          "label": "Qwen 2.5 72B (free)",
+          "error": "No endpoints found for qwen/qwen-2.5-72b-instruct:free.",
+          "latency": 45
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "google/gemma-3-12b-it:free",
+          "label": "Gemma 3 12B (free)",
+          "error": "Provider returned error",
+          "latency": 245
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "deepseek/deepseek-r1-zero:free",
+          "label": "DeepSeek R1 Zero (free)",
+          "error": "No endpoints found for deepseek/deepseek-r1-zero:free.",
+          "latency": 499
+        }
+      ]
+    }
+  ]
+}
