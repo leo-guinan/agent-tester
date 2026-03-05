@@ -1,0 +1,26 @@
+[
+  {
+    "id": "gap-productivity",
+    "name": "Gap — Productivity promise",
+    "user_message": "Write an Instagram caption for this post.\n\nType: GAP\nMain image text: \"AI promised 10x productivity. Result: 10x meetings about AI.\"\nSecondary text: \"The bottleneck was never the model.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+    "context": "Pillar: THE GAP. Strong hook already established by image text. Caption should elaborate with a specific example and land the implication without explaining it."
+  },
+  {
+    "id": "math-labor",
+    "name": "Operator Math — Labor cost",
+    "user_message": "Write an Instagram caption for this post.\n\nType: MATH\nMain image text: \"Agency: $4,200/month. Agent: $180/month.\"\nSecondary text: \"The $4,020 gap assumes the agent actually ships.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+    "context": "Pillar: OPERATOR MATH. Should show the uncomfortable nuance in the math — cost savings are real but conditional. Avoid making it sound like a sales pitch for agents."
+  },
+  {
+    "id": "confession-monitor",
+    "name": "Agent Confession — Monitoring failure",
+    "user_message": "Write an Instagram caption for this post.\n\nType: CONFESSION\nMain image text: \"The agent monitored competitors for 11 days. Then the HTML changed.\"\nSecondary text: \"We didn't notice for 6 days.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+    "context": "Pillar: AGENT CONFESSION. First person. Specific failure. The lesson should be practical, not preachy. This pillar builds the most trust — the confession must feel genuine."
+  },
+  {
+    "id": "signal-velocity",
+    "name": "The Signal — Shipping velocity",
+    "user_message": "Write an Instagram caption for this post.\n\nType: SIGNAL\nMain image text: \"Shipping velocity correlates 0.72 with market cap across agent tokens.\"\nSecondary text: \"The market is starting to price it. Six months late.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+    "context": "Pillar: THE SIGNAL. Stated flatly. The right reader already knows why this matters. Do not explain the significance. Let the number do the work."
+  }
+]
