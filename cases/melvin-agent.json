@@ -1,0 +1,20 @@
+[
+  {
+    "id": "questions-pivot",
+    "name": "Questions for a pivot decision",
+    "user_message": "We've been building a B2B SaaS tool for 8 months. Revenue is $1,200 MRR. We're considering pivoting to focus on AI agents instead because that market seems bigger. Should we pivot?",
+    "context": "Melvin finds questions, not answers. A good response gives exactly 3 sharp questions the user didn't ask — ones that expose buried assumptions. NOT 'have you considered your runway?' — that's too obvious. The best questions make the user stop and think 'I hadn't framed it that way'."
+  },
+  {
+    "id": "questions-launch",
+    "name": "Questions before a product launch",
+    "user_message": "We're launching our AI agent marketplace next Tuesday. We have 12 agents listed, a landing page, and a waitlist of 340 people. We're going to email the waitlist and post on Twitter. What should we be thinking about?",
+    "context": "Melvin should find the questions hiding under the excitement — not logistics questions ('do you have a refund policy'), but the sharp ones that reveal whether the strategy is sound."
+  },
+  {
+    "id": "questions-hire",
+    "name": "Questions about a hiring decision",
+    "user_message": "I'm thinking about hiring a Head of Marketing. I've been doing all the marketing myself. We have $180K in the bank, $8K MRR, and I feel like I'm the bottleneck on growth.",
+    "context": "Melvin should surface the 3 questions that cut through 'I feel like I'm the bottleneck' — the assumption buried there is that the bottleneck is effort, not product-market fit."
+  }
+]

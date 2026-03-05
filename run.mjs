@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const OR_KEY = readFileSync(join(homedir(), '.marvin/secrets/openrouter-api-key'), 'utf8').trim();
 const OR_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const OLLAMA_URL = 'http://localhost:11434/v1/chat/completions';
 const MODEL_LIST = JSON.parse(readFileSync(join(__dirname, 'models.json'), 'utf8'));
 
 // --- CLI args ---
@@ -56,40 +57,66 @@ if (modelsArg) {
   models = modelsArg.split(',').map(id => ({ id: id.trim(), label: id.trim() }));
 } else if (groupsArg) {
   for (const g of groupsArg.split(',')) {
-    if (MODEL_LIST.groups[g.trim()]) models.push(...MODEL_LIST.groups[g.trim()]);
+    if (g === 'ollama') models.push(...MODEL_LIST.ollama);
+    else if (MODEL_LIST.groups[g.trim()]) models.push(...MODEL_LIST.groups[g.trim()]);
     else console.warn(`Unknown group: ${g}`);
   }
 } else {
-  // Default: free + openai nano + haiku
+  // Default: ollama + the three benchmark models
   models = [
-    ...MODEL_LIST.groups.free,
-    MODEL_LIST.groups.openai[0],
-    MODEL_LIST.groups.anthropic[0],
-  ];
+    ...MODEL_LIST.ollama,
+    MODEL_LIST.groups.openai.find(m => m.id.includes('gpt-5-nano')),
+    MODEL_LIST.groups.anthropic.find(m => m.id.includes('haiku-4-5')),
+    { id: 'qwen/qwen3.5-27b', label: 'Qwen 3.5 27B' },
+  ].filter(Boolean);
 }
 
 console.log(`Models: ${models.map(m => m.label).join(', ')}\n`);
 
+// Pricing per token (from models.json pricing data)
+const PRICING = {
+  'qwen/qwen3.5-27b':          { prompt: 0.000000195, completion: 0.00000156 },
+  'anthropic/claude-haiku-4-5': { prompt: 0.000001,    completion: 0.000005   },
+  'openai/gpt-5-nano':         { prompt: 0.00000005,  completion: 0.0000004  },
+  // Free models
+  'meta-llama/llama-3.2-3b-instruct:free':  { prompt: 0, completion: 0 },
+  'meta-llama/llama-3.3-70b-instruct:free': { prompt: 0, completion: 0 },
+};
+
+function estimateCost(modelId, promptTokens, completionTokens) {
+  const p = PRICING[modelId];
+  if (!p) return null;
+  return (promptTokens || 0) * p.prompt + (completionTokens || 0) * p.completion;
+}
+
 // --- Runner ---
 async function callModel(model, userMessage) {
   const start = Date.now();
+  const isOllama = model.id.startsWith('ollama/');
+  const ollamaModel = isOllama ? model.id.replace('ollama/', '') : null;
+
   try {
-    const res = await fetch(OR_URL, {
+    const url = isOllama ? OLLAMA_URL : OR_URL;
+    const headers = isOllama
+      ? { 'Content-Type': 'application/json' }
+      : {
+          'Authorization': `Bearer ${OR_KEY}`,
+          'Content-Type': 'application/json',
+          'HTTP-Referer': 'https://metaspn.network',
+          'X-Title': 'MetaSPN Agent Tester',
+        };
+
+    const res = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${OR_KEY}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://metaspn.network',
-        'X-Title': 'MetaSPN Agent Tester',
-      },
+      headers,
       body: JSON.stringify({
-        model: model.id,
+        model: isOllama ? ollamaModel : model.id,
         messages: [
           { role: 'system', content: systemPrompt },
           { role: 'user', content: userMessage },
         ],
         temperature,
-        max_tokens: 400,
+        max_tokens: 800,  // Reasoning models need budget before they output
       }),
     });
 
@@ -100,14 +127,25 @@ async function callModel(model, userMessage) {
       return { model: model.id, label: model.label, error: data.error.message, latency };
     }
 
-    const output = data.choices?.[0]?.message?.content?.trim() || '';
+    const msg = data.choices?.[0]?.message || {};
+    // Reasoning models (o1/o3/gpt-5-nano) may return content=null with text in reasoning_details
+    // or in a separate output array — fall through to find text
+    let output = msg.content?.trim() || '';
+    if (!output && msg.reasoning_details) {
+      // Extract summary text if direct content is absent
+      const summary = msg.reasoning_details.find(d => d.type === 'reasoning.summary');
+      output = summary?.summary?.trim() || '';
+    }
     const usage = data.usage || {};
+    const promptTok = usage.prompt_tokens || 0;
+    const completionTok = usage.completion_tokens || 0;
     return {
       model: model.id,
       label: model.label,
       output,
       latency,
-      tokens: { prompt: usage.prompt_tokens, completion: usage.completion_tokens },
+      tokens: { prompt: promptTok, completion: completionTok, reasoning: usage.reasoning_tokens },
+      cost_usd: estimateCost(model.id, promptTok, completionTok),
     };
   } catch (e) {
     return { model: model.id, label: model.label, error: e.message, latency: Date.now() - start };

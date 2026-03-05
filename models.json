@@ -1,4 +1,8 @@
 {
+  "ollama": [
+    { "id": "ollama/llama3.2:latest", "label": "Ollama Llama 3.2 (local)" },
+    { "id": "ollama/qwen3:4b", "label": "Ollama Qwen3 4B (local)" }
+  ],
   "groups": {
     "free": [
       { "id": "meta-llama/llama-3.2-3b-instruct:free", "label": "Llama 3.2 3B (free)" },

@@ -1,0 +1,230 @@
+{
+  "agent": "/Users/leoguinan/caption-writer-agent",
+  "timestamp": "2026-03-05T01-39-58",
+  "models": [
+    {
+      "id": "qwen/qwen3.5-27b",
+      "label": "qwen/qwen3.5-27b"
+    },
+    {
+      "id": "anthropic/claude-haiku-4-5",
+      "label": "anthropic/claude-haiku-4-5"
+    },
+    {
+      "id": "openai/gpt-5-nano",
+      "label": "openai/gpt-5-nano"
+    }
+  ],
+  "cases": [
+    {
+      "id": "gap-productivity",
+      "name": "Gap — Productivity promise",
+      "user_message": "Write an Instagram caption for this post.\n\nType: GAP\nMain image text: \"AI promised 10x productivity. Result: 10x meetings about AI.\"\nSecondary text: \"The bottleneck was never the model.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: THE GAP. Strong hook already established by image text. Caption should elaborate with a specific example and land the implication without explaining it."
+    },
+    {
+      "id": "math-labor",
+      "name": "Operator Math — Labor cost",
+      "user_message": "Write an Instagram caption for this post.\n\nType: MATH\nMain image text: \"Agency: $4,200/month. Agent: $180/month.\"\nSecondary text: \"The $4,020 gap assumes the agent actually ships.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: OPERATOR MATH. Should show the uncomfortable nuance in the math — cost savings are real but conditional. Avoid making it sound like a sales pitch for agents."
+    },
+    {
+      "id": "confession-monitor",
+      "name": "Agent Confession — Monitoring failure",
+      "user_message": "Write an Instagram caption for this post.\n\nType: CONFESSION\nMain image text: \"The agent monitored competitors for 11 days. Then the HTML changed.\"\nSecondary text: \"We didn't notice for 6 days.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: AGENT CONFESSION. First person. Specific failure. The lesson should be practical, not preachy. This pillar builds the most trust — the confession must feel genuine."
+    },
+    {
+      "id": "signal-velocity",
+      "name": "The Signal — Shipping velocity",
+      "user_message": "Write an Instagram caption for this post.\n\nType: SIGNAL\nMain image text: \"Shipping velocity correlates 0.72 with market cap across agent tokens.\"\nSecondary text: \"The market is starting to price it. Six months late.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+      "context": "Pillar: THE SIGNAL. Stated flatly. The right reader already knows why this matters. Do not explain the significance. Let the number do the work."
+    }
+  ],
+  "results": [
+    {
+      "case": {
+        "id": "gap-productivity",
+        "name": "Gap — Productivity promise",
+        "user_message": "Write an Instagram caption for this post.\n\nType: GAP\nMain image text: \"AI promised 10x productivity. Result: 10x meetings about AI.\"\nSecondary text: \"The bottleneck was never the model.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: THE GAP. Strong hook already established by image text. Caption should elaborate with a specific example and land the implication without explaining it."
+      },
+      "results": [
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "The productivity improvement was real. It improved the speed of producing insights that required three new stakeholder meetings to discuss.\n\nTen times faster to generate the report. Three times longer to align on what it means. The math works if you only count the generation step.\n\nThe bottleneck was never the model.\n\n#theparanoidagent #agenteconomy #aiproductivity #operators",
+          "latency": 1871,
+          "tokens": {
+            "prompt": 1904,
+            "completion": 86
+          }
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "",
+          "latency": 7601,
+          "tokens": {
+            "prompt": 1717,
+            "completion": 384
+          }
+        },
+        {
+          "case_id": "gap-productivity",
+          "case_name": "Gap — Productivity promise",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "The model reduced the task time by 90 percent.\n\nThe approval cycle expanded to consume the saved time. We now have three meetings a week dedicated to validating the output instead of generating it.\n\nEfficiency without process redesign is just faster bureaucracy.\n\n#theparanoidagent #agenteconomy #productivity #workflow #automation",
+          "latency": 35384,
+          "tokens": {
+            "prompt": 1798,
+            "completion": 2816
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "math-labor",
+        "name": "Operator Math — Labor cost",
+        "user_message": "Write an Instagram caption for this post.\n\nType: MATH\nMain image text: \"Agency: $4,200/month. Agent: $180/month.\"\nSecondary text: \"The $4,020 gap assumes the agent actually ships.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: OPERATOR MATH. Should show the uncomfortable nuance in the math — cost savings are real but conditional. Avoid making it sound like a sales pitch for agents."
+      },
+      "results": [
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "Agency: $4,200/month. Agent: $180/month. The math is obvious.\n\nThe gap closes only if the agent ships consistently. Most don't. Most require prompt tuning every 2-3 weeks when the underlying service changes something invisible. Most need human verification on the outputs that matter.\n\nThe $4,020 monthly difference is real. The assumption that it replaces the agency is not.\n\n#theparanoidagent #agenteconomy #operatormath #aiagents #founders",
+          "latency": 1902,
+          "tokens": {
+            "prompt": 1908,
+            "completion": 115
+          }
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "",
+          "latency": 13054,
+          "tokens": {
+            "prompt": 1720,
+            "completion": 384
+          }
+        },
+        {
+          "case_id": "math-labor",
+          "case_name": "Operator Math — Labor cost",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "The spreadsheet says save $4,020.\n\nThe $4,020 gap assumes the agent actually ships. When the target API changes without notice, the savings evaporate into debugging hours.\n\nReliability costs more than the invoice suggests.\n\n#theparanoidagent #agenteconomy #operatormath #aiagents #founders",
+          "latency": 70158,
+          "tokens": {
+            "prompt": 1806,
+            "completion": 5744
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "confession-monitor",
+        "name": "Agent Confession — Monitoring failure",
+        "user_message": "Write an Instagram caption for this post.\n\nType: CONFESSION\nMain image text: \"The agent monitored competitors for 11 days. Then the HTML changed.\"\nSecondary text: \"We didn't notice for 6 days.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: AGENT CONFESSION. First person. Specific failure. The lesson should be practical, not preachy. This pillar builds the most trust — the confession must feel genuine."
+      },
+      "results": [
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "The agent was supposed to monitor competitor pricing. It monitored competitor pricing for 11 days. Then the target website changed its HTML structure and the agent reported no competitors existed.\n\nWe did not notice for 6 days. The weekly report looked fine. The data was wrong.\n\nExternal verification is not optional.\n\n#theparanoidagent #agenteconomy #aiagents #operators #founders",
+          "latency": 1092,
+          "tokens": {
+            "prompt": 1905,
+            "completion": 89
+          }
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "",
+          "latency": 8213,
+          "tokens": {
+            "prompt": 1716,
+            "completion": 384
+          }
+        },
+        {
+          "case_id": "confession-monitor",
+          "case_name": "Agent Confession — Monitoring failure",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "The weekly report looked fine while the data stream went silent.\n\nThe agent monitored competitors for 11 days before the HTML changed and it reported no competitors existed. We did not notice for 6 days.\n\nExternal verification is not optional.\n\n#theparanoidagent #agenteconomy #agentconfession #aiagents #founders",
+          "latency": 59604,
+          "tokens": {
+            "prompt": 1799,
+            "completion": 5088
+          }
+        }
+      ]
+    },
+    {
+      "case": {
+        "id": "signal-velocity",
+        "name": "The Signal — Shipping velocity",
+        "user_message": "Write an Instagram caption for this post.\n\nType: SIGNAL\nMain image text: \"Shipping velocity correlates 0.72 with market cap across agent tokens.\"\nSecondary text: \"The market is starting to price it. Six months late.\"\n\nReturn ONLY the caption. No explanation. No preamble. Just the caption text ready to post.",
+        "context": "Pillar: THE SIGNAL. Stated flatly. The right reader already knows why this matters. Do not explain the significance. Let the number do the work."
+      },
+      "results": [
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "anthropic/claude-haiku-4-5",
+          "label": "anthropic/claude-haiku-4-5",
+          "output": "Six months ago this correlation was invisible to the market. Today it's becoming visible. The window for positioning on high-velocity, low-narrative agents is closing.\n\nWe published the methodology in February. The market is noticing now.\n\n#theparanoidagent #agenteconomy #agenttoken #defi #signal #operators",
+          "latency": 1034,
+          "tokens": {
+            "prompt": 1908,
+            "completion": 75
+          }
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "openai/gpt-5-nano",
+          "label": "openai/gpt-5-nano",
+          "output": "",
+          "latency": 10727,
+          "tokens": {
+            "prompt": 1720,
+            "completion": 384
+          }
+        },
+        {
+          "case_id": "signal-velocity",
+          "case_name": "The Signal — Shipping velocity",
+          "model": "qwen/qwen3.5-27b",
+          "label": "qwen/qwen3.5-27b",
+          "output": "The market ignored the correlation for six months.\n\nShipping velocity correlated 0.72 with market cap across agent tokens. We published the methodology in February.\n\nThe window for early positioning on high-velocity agents is closing.\n\n#theparanoidagent #agenteconomy #agenttoken #defi #signal",
+          "latency": 55189,
+          "tokens": {
+            "prompt": 1800,
+            "completion": 4756
+          }
+        }
+      ]
+    }
+  ]
+}

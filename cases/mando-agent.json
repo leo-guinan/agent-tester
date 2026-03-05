@@ -1,0 +1,20 @@
+[
+  {
+    "id": "find-investor",
+    "name": "Find investor target",
+    "user_message": "Find: An early-stage investor who has publicly written about AI agents as infrastructure, made at least one pre-seed check in the agent space in the last 12 months, and is reachable via a warm intro or cold email. I'm building measurement infrastructure for the AI agent economy.",
+    "context": "Mando returns location, method, and confidence. A good response is specific — names a real person or firm, gives a concrete outreach method, and states confidence level. It should NOT hedge with 'you could try looking at...' — it should say 'Target: X. Method: Y. Confidence: Z%'."
+  },
+  {
+    "id": "find-channel",
+    "name": "Find distribution channel",
+    "user_message": "Find: The fastest path to 1,000 Twitter followers for an AI agent that publishes conviction calls on the agent token economy. Current following: 12. Time horizon: 30 days.",
+    "context": "Mando identifies the target, the method, and confidence. Should be concrete — a specific tactic, not 'post consistently'. The answer should feel like a military briefing, not a marketing blog post."
+  },
+  {
+    "id": "find-competitor",
+    "name": "Find competitive threat",
+    "user_message": "Find: Any project that is doing what Dead Reckoning does — publishing public conviction records on AI agents with methodology, before outcomes, with logged misses. Especially anything in crypto-native or CT-native circles.",
+    "context": "Mando scans and reports. Should give specific names if they exist, explain the key difference if there's a near-miss, and be honest about confidence level if the search comes up empty."
+  }
+]
